@@ -1,0 +1,212 @@
+<table class="info-table">
+
+  <colgroup>
+    <col style="width:83px">
+    <col>
+    <col style="width:30px">
+  </colgroup>
+
+  <tr>
+    <th colspan="2">テンション効果</th>
+    <th>
+      <button class="max-btn reset-group-btn" data-reset-group="tension">
+        ﾘｾｯﾄ
+      </button>
+    </th>
+  </tr>
+
+  <tr>
+    <th>
+      <font size="-1">テンション</font>
+    </th>
+    <td>
+      <select id="tension_tension_P">
+        <option value="0">なし</option>
+        <option value="0.5">1段階</option>
+        <option value="1">2段階</option>
+        <option value="1.5">3段階</option>
+        <option value="2.5">4段階</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="tension_tension_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>冥雲魔人</th>
+    <td>
+      <input type="number" step="10" id="mugen_tension_plus_P">
+    </td>
+    <td>
+      <button class="max-btn" data-max="mugen_tension_plus_P" data-value="580">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>カブ</th>
+    <td>
+      <select id="kabu_tension_plus_P">
+        <option value="0">+0</option>
+        <option value="100">+100</option>
+        <option value="120">+120</option>
+        <option value="140">+140</option>
+        <option value="160">+160</option>
+        <option value="180">+180</option>
+        <option value="200">+200</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="kabu_tension_plus_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>真髄宝珠</th>
+    <td>
+      <select id="sinzui_Lv_P">
+        <option value="0">Lv0</option>
+        <option value="1">Lv1</option>
+        <option value="2">Lv2</option>
+        <option value="3">Lv3</option>
+        <option value="4">Lv4</option>
+        <option value="5">Lv5</option>
+        <option value="6">Lv6</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="sinzui_Lv_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>武槍ｽｷﾙ</th>
+    <td>
+      <select id="bu_lance_tension_plus_P">
+        <option value="0">+0</option>
+        <option value="300">+300</option>
+      </select>
+    </td>
+    <td>
+      <input type="checkbox" data-target="bu_lance_tension_plus_P" class="checkbox-large">
+    </td>
+  </tr>
+  <tr>
+    <th>防具</th>
+    <td>
+      <select id="bougu_tension_plus_P">
+        <option value="0">+0</option>
+        <option value="100">+100</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="bougu_tension_plus_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>その他＋</th>
+    <td>
+      <input type="number" id="other_tension_plus_P">
+    </td>
+    <td>
+
+    </td>
+  </tr>
+  <tr>
+    <th>合計</th>
+    <td class="bold" colspan="2">
+      <span id="tension_plus_total"></span>
+    </td>
+  </tr>
+</table>
+
+
+
+<table class="info-table">
+
+  <colgroup>
+    <col style="width:83px">
+    <col>
+    <col style="width:30px">
+  </colgroup>
+
+  <tr>
+    <th colspan="2">タロット関連</th>
+    <th>
+      <button class="max-btn reset-group-btn" data-reset-group="tarot">
+        ﾘｾｯﾄ
+      </button>
+    </th>
+  </tr>
+  
+  <tr>
+    <th rowspan="2">ﾀﾛｯﾄ宝珠</th>
+    <td>
+      <select id="houju_tarot_Lv_P">
+        <option value="0">Lv0</option>
+        <option value="1">Lv1</option>
+        <option value="2">Lv2</option>
+        <option value="3">Lv3</option>
+        <option value="4">Lv4</option>
+        <option value="5">Lv5</option>
+        <option value="6">Lv6</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="houju_tarot_Lv_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <td class="bold" colspan="2">
+      <span id="houju_tarot_P_total"></span>
+    </td>
+  </tr>
+  <tr>
+    <th>～100P</th>
+    <td>
+      <select id="s100P_tarot_damage_up_P">
+        <option value="0">+0%</option>
+        <option value="1">+100% (48P)</option>
+        <option value="2">+200% (80P)</option>
+        <option value="3">+300% (100P)</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="s100P_tarot_damage_up_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>160P～</th>
+    <td>
+      <select id="s160P_tarot_damage_up_P">
+        <option value="0">+0%</option>
+        <option value="0.2">+20% (160P)</option>
+        <option value="0.3">+30% (170P)</option>
+        <option value="0.5">+50% (180P)</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="s160P_tarot_damage_up_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>棍58P</th>
+    <td>
+      <select id="kon_tarot_damage_up_P">
+        <option value="0">+0%</option>
+        <option value="0.5">+50%</option>
+      </select>
+    </td>
+    <td>
+      <input type="checkbox" data-target="kon_tarot_damage_up_P" class="checkbox-large">
+    </td>
+  </tr>
+  <tr>
+    <th>水晶球</th>
+    <td>
+      <select id="suishou_tarot_damage_up_P">
+        <option value="0">+0%</option>
+        <option value="2">+200%</option>
+      </select>
+    </td>
+    <td>
+      <input type="checkbox" data-target="suishou_tarot_damage_up_P" class="checkbox-large">
+    </td>
+  </tr>
+</table>

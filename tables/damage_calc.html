@@ -1,0 +1,128 @@
+<table class="calc-table no-disabled-style">
+
+  <colgroup>
+    <col style="width:130px">
+    <col style="width:125px">
+    <col style="width:300px">
+  </colgroup>
+
+  <tr>
+    <th>
+
+    </th>
+    <th colspan="2">
+      Yes
+    </th>
+    <th>
+      No
+    </th>
+  </tr>
+  <tr>
+    <th>
+      通常攻撃依存？
+    </th>
+    <td colspan="2">
+      round(攻撃 / 2 - 守備 / 4 ± 乱数) * (特技倍率)
+    </td>
+    <td>
+      (各スキルの計算式) ± 乱数
+    </td>
+  </tr>
+  <tr>
+    <th>
+      戦車のタロット
+    </th>
+    <td colspan="3">
+      バフの種類の数に応じたボーナスを加算
+    </td>
+  </tr>
+  <tr>
+    <th>
+      テンション？
+    </th>
+    <td colspan="2">
+      テンション倍率 + 加算ボーナス
+    </td>
+    <td>
+      1
+    </td>
+  </tr>
+  <tr>
+    <th rowspan="4" class="type">
+      会心？
+    </th>
+    <th class="subtype">
+      単体攻撃
+    </th>
+    <td>
+      max(x, y) * 0.95～1.05
+    </td>
+    <td rowspan="4">
+      1
+    </td>
+  </tr>
+  <tr>
+    <th>
+      範囲攻撃
+    </th>
+    <td>
+      (↑までの値) * 1.2～1.6
+    </td>
+  </tr>
+  <tr>
+    <th>
+      通常攻撃非依存
+    </th>
+    <td>
+      (↑までの値) * 1.2～1.6
+    </td>
+  </tr>
+  <tr>
+    <th>
+      呪文
+    </th>
+    <td>
+      テンション依存の倍率
+    </td>
+  </tr>
+  <tr>
+    <th>
+      厄災の滅撃など
+    </th>
+    <td colspan="3">
+      デバフの種類の数に応じたボーナスを加算
+    </td>
+  </tr>
+  <tr>
+    <th>
+      各種ダメージUP
+    </th>
+    <td colspan="3">
+      A * B * C * D * タロット宝珠(それぞれのカテゴリ内は合算)
+    </td>
+  </tr>
+  <tr>
+    <th>
+      切り捨て
+    </th>
+    <td colspan="3">
+      ↑までの値を小数点以下切り捨て
+    </td>
+  </tr>
+  <tr>
+    <th>
+      ダメ＋
+    </th>
+    <td colspan="3">
+      各種ダメージ＋を加算
+    </td>
+  </tr>
+  <tr>
+    <th>
+      上限
+    </th>
+    <td colspan="3">
+      ダメージ上限とminをとる
+    </td>
+  </tr>
+</table>

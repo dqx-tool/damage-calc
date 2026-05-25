@@ -1,0 +1,102 @@
+<table class="info-table">
+
+  <colgroup>
+    <col style="width:83px">
+    <col>
+    <col style="width:30px">
+  </colgroup>
+  
+  <tr>
+    <th colspan="2">D: 敵の被ダメ上昇</th>
+    <th>
+      <button class="max-btn reset-group-btn" data-reset-group="damage_up_E">
+        ﾘｾｯﾄ
+      </button>
+    </th>
+  </tr>
+
+  <tr>
+    <th>レボル系</th>
+    <td>
+      <select id="revol_damage_up_E">
+        <option value="0">+0%</option>
+        <option value="0.5">+50%</option>
+      </select>
+    </td>
+    <td>
+      <input type="checkbox" data-target="revol_damage_up_E" class="checkbox-large">
+    </td>
+  </tr>
+  <tr>
+    <th>災禍</th>
+    <td>
+      <select id="saika_damage_up_E">
+        <option value="0">+0%</option>
+        <option value="0.5">+50%</option>
+      </select>
+    </td>
+    <td>
+      <input type="checkbox" data-target="saika_damage_up_E" class="checkbox-large">
+    </td>
+  </tr>
+  <tr>
+    <th>愚者</th>
+    <td>
+      <select id="gusha_damage_up_E">
+        <option value="0">+0%</option>
+        <option value="0.2">+20%</option>
+      </select>
+    </td>
+    <td>
+      <input type="checkbox" data-target="gusha_damage_up_E" class="checkbox-large">
+    </td>
+  </tr>
+  <tr>
+    <th>霊脈</th>
+    <td>
+      <select id="reimyaku_damage_up_E">
+        <option value="0">+0%</option>
+        <option value="0.3">+30%</option>
+      </select>
+    </td>
+    <td>
+      <input type="checkbox" data-target="reimyaku_damage_up_E" class="checkbox-large">
+    </td>
+  </tr>
+  <tr>
+    <th>ぶきみ系</th>
+    <td>
+      <select id="bukimi_damage_up_E">
+        <option value="0">+0%</option>
+        <option value="0.4">+40% (ぶきみ1段階)</option>
+        <option value="0.6">+60% (ぶきみ2段階)</option>
+        <option value="-0.2">-20% (マジバリ1段階)</option>
+        <option value="-0.4">-40% (マジバリ2段階)</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="bukimi_damage_up_E" data-offset="-3">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>ファラ系</th>
+    <td>
+      <select id="phala_damage_up_E">
+        <option value="0">-0%</option>
+        <option value="-0.2">-20% (闇のヴェール、事象反転)</option>
+        <option value="-0.25">-25% (ファラギス etc.)</option>
+        <option value="-0.5">-50% (モンスターゾーン etc.)</option>
+        <option value="-0.8">-80% (堅守の書 etc.)</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="phala_damage_up_E" data-offset="-3">ﾌｧﾗ</button>
+    </td>
+  </tr>
+  <tr>
+    <th>合計</th>
+    <td class="bold" colspan="2">
+      <span id="damage_up_E_total"></span>
+    </td>
+  </tr>
+</table>

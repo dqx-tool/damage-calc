@@ -1,0 +1,305 @@
+/* ----------------------------
+   基本レイアウト
+---------------------------- */
+
+body {
+  width: 800px;
+  margin: auto;
+}
+
+.table-group {
+  display: flex;
+  align-items: flex-start;
+}
+
+.table-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-row {
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  align-items: start;
+  margin: 5px;
+}
+
+
+
+/* ----------------------------
+   ツールチップ
+---------------------------- */
+
+.tooltip {
+  position: relative;
+  cursor: pointer;
+
+  &:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.tooltip-text {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -35px;
+  display: inline-block;
+  padding: 5px;
+  white-space: nowrap;
+  font-size: 10.5px;
+  line-height: 1.3;
+  background: #333;
+  color: #fff;
+  border-radius: 3px;
+  transition: 0.3s ease-in;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    margin-left: -7px;
+    border: 7px solid transparent;
+    border-bottom: 7px solid #333;
+  }
+}
+
+
+
+
+/* ----------------------------
+   テーブル
+---------------------------- */
+
+table {
+  border-collapse: collapse;
+  width: 200px;
+  margin-bottom: 4px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 4px;
+  text-align: center;
+}
+
+th {
+  background: #e6f3ff;
+}
+
+tr:first-child {
+  background: #ddd;
+  font-weight: bold;
+}
+
+.result-table {
+  width: 800px;
+  table-layout: fixed;
+}
+
+.calc-table {
+  width: 800px;
+  table-layout: fixed;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.total {
+  background: #ffff00;
+  font-weight: bold;
+}
+
+.disabled-row th {
+  color: #999;
+  background: #f7f7f7;
+}
+
+.active-buff th {
+  background: #ffff88;
+}
+
+/* ----------------------------
+   列幅調整
+---------------------------- */
+
+.status-table th {
+  width: 122px;
+}
+
+.equipment-table th {
+  width: 40px;
+}
+
+.equipment-table td:nth-child(3) {
+  width: 45px;
+}
+
+.enemy-table th {
+  width: 58px;
+}
+
+.result-table th,
+.result-table td {
+  white-space: nowrap;
+}
+
+
+/* ----------------------------
+   input / select
+---------------------------- */
+
+input,
+select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  padding: 3px;
+}
+
+input[type="radio"] {
+  width: auto;
+  margin-right: 4px;
+}
+
+input[type="checkbox"] {
+  width: auto;
+}
+
+input:read-only {
+  background: #eee;
+}
+
+select:disabled {
+  background: #eee
+}
+
+
+/* ----------------------------
+   ボタン
+---------------------------- */
+
+.max-btn {
+  display: block;
+  width: 30px;
+  font-size: 11px;
+  padding: 1px 1px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+
+  margin-bottom: 4px;
+}
+
+
+/* ----------------------------
+   %入力
+---------------------------- */
+
+.percent-input {
+  position: relative;
+}
+
+.percent-input input {
+  padding-left: 15px;
+}
+
+.percent-input::after {
+  content: "%";
+  font-size: 11px;
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+
+/* ----------------------------
+   checkbox
+---------------------------- */
+
+.checkbox-large {
+  display: block;
+  transform: scale(1.3);
+  transform-origin: center;
+  margin: auto;
+  cursor: pointer;
+}
+
+
+/* ----------------------------
+   結果表示
+---------------------------- */
+
+.result-area {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+
+/* ----------------------------
+   セーブ管理
+---------------------------- */
+
+.save-panel {
+  width: 800px;
+  border: 1px solid #ccc;
+  background: #f8fbff;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.save-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.save-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.save-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  gap: 6px;
+}
+
+.save-panel button {
+
+  border: 1px solid #999;
+  background: #fff;
+  cursor: pointer;
+  padding: 5px;
+  transition: 0.15s;
+}
+
+.save-panel button:hover {
+  background: #e6f3ff;
+}
+
+#save_list {
+  height: 30px;
+}

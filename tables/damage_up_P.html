@@ -1,0 +1,272 @@
+<table class="info-table">
+
+  <colgroup>
+    <col style="width:83px">
+    <col>
+    <col style="width:30px">
+  </colgroup>
+  
+  <tr>
+    <th colspan="2">B: 与ダメ上昇</th>
+    <th>
+      <button class="max-btn reset-group-btn" data-reset-group="damage_up_P">
+        ﾘｾｯﾄ
+      </button>
+    </th>
+  </tr>
+
+  <tr>
+    <th>種族武器</th>
+    <td>
+      <select id="buki_damage_up_P">
+        <option value="0">+0%</option>
+        <option value="0.1">+10%</option>
+        <option value="0.15">+15%</option>
+        <option value="0.2">+20%</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="buki_damage_up_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>種族断罪</th>
+    <td>
+      <select id="danzai_damage_up_P">
+        <option value="0">+0%</option>
+        <option value="0.03">+3%</option>
+        <option value="0.05">+5%</option>
+        <option value="0.07">+7%</option>
+        <option value="0.09">+9%</option>
+        <option value="0.11">+11%</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="danzai_damage_up_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>種族ﾍﾞﾙﾄ</th>
+    <td>
+      <select id="belt_damage_up_P">
+        <option value="0">+0%</option>
+        <option value="0.04">+4%</option>
+        <option value="0.05">+5%</option>
+        <option value="0.06">+6%</option>
+        <option value="0.07">+7%</option>
+        <option value="0.08">+8%</option>
+        <option value="0.09">+9%</option>
+        <option value="0.1">+10%</option>
+        <option value="0.11">+11%</option>
+        <option value="0.12">+12%</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="belt_damage_up_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>特技ｽｷﾙ</th>
+    <td>
+      <select id="skill_Lv_P">
+        <option value="0">0P</option>
+        <option value="1">160P</option>
+        <option value="2">170P</option>
+        <option value="3">180P</option>
+        <option value="4">200P</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="skill_Lv_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>特技宝珠</th>
+    <td>
+      <select id="houju_Lv_P">
+        <option value="0">Lv0</option>
+        <option value="1">Lv1</option>
+        <option value="2">Lv2</option>
+        <option value="3">Lv3</option>
+        <option value="4">Lv4</option>
+        <option value="5">Lv5</option>
+        <option value="6">Lv6</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="houju_Lv_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>全てのﾀﾞﾒ</th>
+    <td class="percent-input">
+      <input type="number" id="all_damage_up_input_P">
+    </td>
+    <td>
+      <!-- <button class="max-btn" data-max="all_damage_up_P">最大</button> -->
+    </td>
+  </tr>
+  <tr>
+    <th>ガジェ</th>
+    <td>
+      <select id="gadget_damage_up_P">
+        <option value="0">+0%</option>
+        <option value="1">+100%</option>
+      </select>
+    </td>
+    <td>
+      <input type="checkbox" data-target="gadget_damage_up_P" class="checkbox-large">
+    </td>
+  </tr>
+  <tr>
+    <th>ｳｫｰｸﾗｲ系</th>
+    <td>
+      <select id="warcry_damage_up_P">
+        <option value="0">+0%</option>
+        <option value="0.2">+20% (小ルーレット etc.)</option>
+        <option value="0.3">+30% (砲撃ブースト)</option>
+        <option value="0.5">+50% (ウォークライ、大ルーレット、牙神昇誕・改、ブーストオーラ etc.)</option>
+        <option value="1">+100% (闇のヴェール)</option>
+      </select>
+    </td>
+    <td>
+      <!-- <button class="max-btn" onclick="selectMax('warcry_damage_up_P')">最大</button> -->
+    </td>
+  </tr>
+  <tr>
+    <th>ファラ系</th>
+    <td>
+      <select id="phala_damage_up_P">
+        <option value="0">-0%</option>
+        <option value="-0.25">-25% (ファラギス)</option>
+        <option value="-0.5">-50% (ルベⅠカラミティ etc.)</option>
+        <option value="-1">-100% (ルベⅡカラミティ、地獄の三連星 etc.)</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="phala_damage_up_P" data-offset="-3">ﾌｧﾗ</button>
+    </td>
+  </tr>
+  <tr>
+    <th>ミニ化</th>
+    <td>
+      <select id="mini_damage_up_P">
+        <option value="0">-0%</option>
+        <option value="-0.5">-50% (にぎりつぶす etc.)</option>
+        <option value="-1">-100% (ぺしゃんこ、レプラコーンコード etc.)</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="mini_damage_up_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>魔力覚醒</th>
+    <td>
+      <select id="maryoku_damage_up_P">
+        <option value="0">+0%</option>
+        <option value="0.5">+50% (1段階)</option>
+        <option value="1">+100% (2段階)</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="maryoku_damage_up_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>ミラゾ</th>
+    <td>
+      <select id="mirazo_damage_up_P">
+        <option value="0">+0%</option>
+        <option value="1">+100% (ミラゾ、神の息吹)</option>
+      </select>
+    </td>
+    <td>
+      <input type="checkbox" data-target="mirazo_damage_up_P" class="checkbox-large">
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <font size="-1">杖150P(魔)</font>
+    </th>
+    <td>
+      <select id="wand_150_damage_up_P">
+        <option value="0">+0%</option>
+        <option value="0.25">+25% (暴走時)</option>
+      </select>
+    </td>
+    <td>
+      <input type="checkbox" data-target="wand_150_damage_up_P" class="checkbox-large">
+    </td>
+  </tr>
+  <tr>
+    <th>特技ﾎﾞｰﾅｽ</th>
+    <td>
+      <select id="damage_up_P_bonus">
+        <option value="0">+0%</option>
+        <option value="shuzoku">+50% +5 (種族特攻)</option>
+        <option value="thanatos">+170% +10 (毒時タナトス)</option>
+        <option value="kaisin_hicchuu">+150% (会心必中)</option>
+        <option value="seigi_A">+125% (怒り時正義のタロット(ランクA以上))</option>
+        <option value="seigi_aura">+200% (怒り時正義のタロット(オーラ))</option>
+      </select>
+    </td>
+    <td>
+
+    </td>
+  </tr>
+  <tr>
+    <th>フォース</th>
+    <td>
+      <select id="force_damage_up_P">
+        <option value="0">+0%</option>
+        <option value="0.1">+10%</option>
+      </select>
+    </td>
+    <td>
+      <input type="checkbox" data-target="force_damage_up_P" class="checkbox-large">
+    </td>
+  </tr>
+  <tr>
+    <th>猛攻の書</th>
+    <td>
+      <select id="moukou_damage_up_P">
+        <option value="0">+0%</option>
+        <option value="0.5">+50%</option>
+      </select>
+    </td>
+    <td>
+      <input type="checkbox" data-target="moukou_damage_up_P" class="checkbox-large">
+    </td>
+  </tr>
+  <tr>
+    <th>防衛階級</th>
+    <td>
+      <select id="kaikyuu_damage_up_P">
+        <option value="0">+0%</option>
+        <option value="0.01">+1% (灰肩)</option>
+        <option value="0.02">+2% (緑肩)</option>
+        <option value="0.03">+3% (青肩)</option>
+        <option value="0.04">+4% (赤肩)</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="kaikyuu_damage_up_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>その他</th>
+    <td class="percent-input">
+      <input type="number" step="0.5" id="other_damage_up_input_P">
+    </td>
+    <td>
+      <!-- <button class="max-btn" onclick="selectMax('damage_up_input_P')">最大</button> -->
+    </td>
+  </tr>
+  <tr>
+    <th>合計</th>
+    <td class="bold" class="bold" colspan="2">
+      <span id="damage_up_P_total"></span>
+    </td>
+  </tr>
+</table>

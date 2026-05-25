@@ -1,0 +1,51 @@
+<table class="enemy-table">
+  <tr>
+    <th colspan="2">敵のステータス</th>
+  </tr>
+  <tr>
+    <th>モンス</th>
+    <td>
+      <select id="enemy_type_select"></select><br>
+      <select id="enemy_name_select"></select>
+    </td>
+  </tr>
+  <tr>
+    <th>HP</th>
+    <td>
+      <span id="HP_E"></span>
+    </td>
+  </tr>
+  <tr>
+    <th>守備力</th>
+    <td>
+      <input type="number" id="shubi_E">
+    </td>
+  </tr>
+  <tr>
+    <th>ルカニ</th>
+    <td>
+      <select id="rukani">
+        <option value="0">なし</option>
+        <option value="-0.3">-30% (ルカニ1段階)</option>
+        <option value="-0.4">-40% (ルカニ2段階)</option>
+        <option value="-1">アヌビス</option>
+        <option value="0.2">+20% (スカラ1段階)</option>
+        <option value="0.4">+40% (スカラ2段階)</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <th>守備力<br>
+      <font size="-1">(計算後)</font>
+    </th>
+    <td><input type="number" id="shubi_E_calculated" readonly></td>
+  </tr>
+  <tr>
+    <th>
+      <font size="-1">デバフの種類の数</font>
+    </th>
+    <td>
+      <input type="number" id="debuff_count">
+    </td>
+  </tr>
+</table>

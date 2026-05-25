@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>与ダメージ計算機</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>与ダメージ計算機</h1>
+  </header>
+
+
+  <div class="toolbar">
+    <button id="reset_all_btn">
+      全リセット
+    </button>
+    
+    <button id="reset_select_btn">
+      補正リセット
+    </button>
+  </div>
+
+
+  <!-- 結果 -->
+  <section>
+    <div id="result"></div>
+  </section>
+
+
+  <!-- プレイヤー側 -->
+  <section class="table-group">
+    <div id="status_P"></div>
+    <div id="tension_P"></div>
+    <div id="attr_P"></div>
+    <div id="damage_up_P"></div>
+  </section>
+
+
+  <!-- 敵側 -->
+  <section class="table-group">
+    <div id="equipment_P"></div>
+    <div id="status_E"></div>
+    <div id="attr_E"></div>
+    <div id="damage_up_E"></div>
+  </section>
+
+
+  <!-- 保存と読み込み -->
+  <div class="save-panel">
+  
+    <div class="save-title">
+      保存/読み込み
+    </div>
+  
+    <div class="save-row">
+  
+      <input id="save_name" placeholder="保存名">
+  
+      <button id="save_btn">
+        保存
+      </button>
+  
+    </div>
+  
+    <div class="save-row">
+  
+      <select id="save_list"></select>
+  
+    </div>
+  
+    <div class="save-grid">
+  
+      <button id="load_btn">
+        読込
+      </button>
+  
+      <button id="delete_btn">
+        削除
+      </button>
+  
+      <button id="export_btn">
+        エクスポート
+      </button>
+      
+      <button id="import_btn">
+        インポート
+      </button>
+      
+      <input type="file" id="import_file" accept=".json" hidden>
+  
+      <button id="share_btn">
+        URLコピー
+      </button>
+  
+    </div>
+  
+  </div>
+
+
+  <!-- 注釈 -->
+  <section class="notes">
+    ※1 スカラ込で入力してください。鉄壁の進軍で使用します。<br>
+    ※2 毒時ダメ＋など、他ダメ＋系もあれば合算してください。<br>
+    ※3 メドローアと戦車のタロットはフォースが乗りません。0%で計算してください。<br>
+    ※4 宝珠以外は「B: 与ダメ上昇」と合算です。<br>
+    ※5 特に記載がなければプレイヤーが与えるダメージです(仲間モンスター等の場合は異なる可能性あり)。<br>
+    ※6 準必中・必中を考慮しています。
+  </section>
+
+
+  <!-- 説明 -->
+  <section class="info">
+
+    <h2>このツールについて</h2>
+
+    <p>
+      ドラゴンクエストXにおける特技・呪文の与ダメージを計算するツールです。<br>
+      ステータスや各種ダメージ補正を入力するとダメージ範囲を計算します。
+    </p>
+
+    <p>
+      バグ、改善点、要望などございましたら
+      <a href="https://x.com/nbrdq10" target="_blank">
+        twitter
+      </a>
+      のDMにお気軽にどうぞ！<br>
+      また、あまり使わないスキルはリストに載せていません。
+      追加してほしいスキルがございましたら、同様にtwitterのDMにお願いします。
+    </p>
+
+  </section>
+
+
+  <!-- ダメージ計算式 -->
+  <section class="info">
+
+    <h2>ざっくりとしたダメージ計算式</h2>
+
+    上から順に計算します：
+    <div id="damage_calc"></div>
+
+    ただし、
+    <ul>
+      <li>
+        x = (↑までの値) * 1.2
+      </li>
+      <li>
+        y = (元々の攻撃力) * min(特技倍率, 1)
+      </li>
+    </ul>
+    です(ごく一部yの特技倍率が特殊な場合あり)。
+
+  </section>
+
+
+  <!-- 参考文献 -->
+  <section class="references">
+
+    <h2>参考にしたサイト</h2>
+
+    <ul>
+      <li>
+        各種仕様や各特技・呪文のダメージ計算式など：
+        <a href="https://wikiwiki.jp/dq10dic2nd/" target="_blank">
+          DQ10大辞典を作ろうぜ！！
+        </a>
+      </li>
+      <li>
+        各種特技・呪文のダメージ(主に新必殺、多少間違いあり)：
+        Kanon Ace,
+        <a href="https://ameblo.jp/kanon-ace/entry-12733660609.html" target="_blank">
+          【DQ10・Ver7.6後期】パラメータによって数値が変動する行動（プレイヤー）
+        </a>
+      </li>
+      <li>
+        通常攻撃依存特技の小数点の扱い：
+        下町豆腐屋ブログ,
+        <a href="http://pan1946.com/archives/57231" target="_blank">
+          【乱数調査⑤】そういうことかぁ～！「特技倍率」のダメージ計算式がわかってきたぞ！！
+        </a>
+      </li>
+      <li>
+        通常攻撃非依存特技および各種補正の小数点の扱い：
+        のぼるの冒険日誌,
+        <a href="https://hiroba.dqx.jp/sc/diary/682407863329/view/8415543/" target="_blank">
+          ダメージの小数点以下はどうなっているのか【鐘1確斧レン計画②】
+        </a>
+      </li>
+      <li>
+        会心時の計算：
+        ドラゴンクエスト10～雪豹の記録保管庫～,
+        <a href="https://yukihyo.xyz/dqx/archives/96" target="_blank">
+          会心の一撃のダメージ計算式と特殊な補正について学ぶ
+        </a>
+      </li>
+      <li>
+        正義のタロットのボーナスダメージ：
+        じゅげむ,
+        <a href="https://www.youtube.com/watch?v=B3HY9jI96cA" target="_blank">
+          DQ10ver7.3　戦車のタロットのダメージボーナス調査250205
+        </a>
+      </li>
+      <li>
+        正義のタロット・デバフ依存特技とテンションの関係：
+        じゅげむ,
+        <a href="https://www.youtube.com/watch?v=x_f3Ey-FnI8" target="_blank">
+          DQ10ver7.3　戦車のタロットとテンション250216
+        </a>
+      </li>
+      <li>
+        呪文暴走時の計算：
+        IKEドラクエ10攻略,
+        <a href="https://dq10.i-k-e.net/job/mgc_7_2" target="_blank">
+          攻撃呪文強化(Ver7.2)
+        </a>
+      </li>
+      <li>
+        各ボスのステータス：
+        棍レグおじさんの常闇生活,
+        <a href="https://gure.grrr.jp/konreg/page-3454/" target="_blank">
+          常闇・聖守護者・咎人ボスの基本ステータス1
+        </a>
+      </li>
+      <li>
+        その他様々なサイト
+      </li>
+    </ul>
+
+  </section>
+
+
+  <!-- 更新履歴 -->
+  <section class="log">
+
+    <h2>更新履歴</h2>
+
+    <ul>
+      <li>2026/04/14 (ver.7.6後期) 初版公開</li>
+    </ul>
+
+  </section>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js">
+  </script>
+
+  <script type="module" src="js/main.js"></script>
+
+</body>
+
+</html>

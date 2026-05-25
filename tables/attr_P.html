@@ -1,0 +1,226 @@
+<table class="info-table">
+
+  <colgroup>
+    <col style="width:83px">
+    <col>
+    <col style="width:30px">
+  </colgroup>
+  
+  <tr>
+    <th colspan="2">A: 属性ダメ上昇</th>
+    <th>
+      <button class="max-btn reset-group-btn" data-reset-group="attr_P">
+        ﾘｾｯﾄ
+      </button>
+    </th>
+  </tr>
+
+  <tr>
+    <th>武器</th>
+    <td>
+      <select id="buki_attr_P">
+        <option value="0">+0%</option>
+        <option value="0.03">+3%</option>
+        <option value="0.05">+5%</option>
+        <option value="0.06">+6%</option>
+        <option value="0.15">+15%</option>
+      </select>
+    </td>
+    <td>
+      <!-- <button class="max-btn" onclick="selectMax('buki_attr_P')">最大</button> -->
+    </td>
+  </tr>
+  <tr>
+    <th>防具</th>
+    <td>
+      <select id="bougu_attr_P">
+        <option value="0">+0%</option>
+        <option value="0.03">+3%</option>
+        <option value="0.05">+5%</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="bougu_attr_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>智謀</th>
+    <td>
+      <select id="tibou_attr_P">
+        <option value="0">+0%</option>
+        <option value="0.005">+0.5%</option>
+        <option value="0.01">+1%</option>
+        <option value="0.015">+1.5%</option>
+        <option value="0.02">+2%</option>
+        <option value="0.025">+2.5%</option>
+        <option value="0.03">+3%</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="tibou_attr_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>断罪</th>
+    <td>
+      <select id="danzai_attr_P">
+        <option value="0">+0%</option>
+        <option value="0.02">+2%</option>
+        <option value="0.025">+2.5%</option>
+        <option value="0.03">+3%</option>
+        <option value="0.04">+4%</option>
+        <option value="0.05">+5%</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="danzai_attr_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>属性ﾍﾞﾙﾄ</th>
+    <td>
+      <select id="belt_attr_P">
+        <option value="0">+0%</option>
+        <option value="0.04">+4%</option>
+        <option value="0.05">+5%</option>
+        <option value="0.06">+6%</option>
+        <option value="0.08">+8%</option>
+        <option value="0.1">+10%</option>
+        <option value="0.11">+11%</option>
+        <option value="0.12">+12%</option>
+        <option value="0.13">+13%</option>
+        <option value="0.14">+14%</option>
+        <option value="0.15">+15%</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="belt_attr_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>こころ</th>
+    <td>
+      <select id="kokoro_attr_P">
+        <option value="0">+0%</option>
+        <option value="0.01">+1%</option>
+        <option value="0.015">+1.5%</option>
+        <option value="0.02">+2%</option>
+        <option value="0.03">+3%</option>
+        <option value="0.035">+3.5%</option>
+        <option value="0.04">+4%</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="kokoro_attr_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>武器ｽｷﾙ</th>
+    <td class="percent-input">
+      <input type="number" id="buki_skill_attr_input_P">
+    </td>
+    <td>
+      <!-- <button class="max-btn" onclick="selectMax('buki_skill_attr_P')">最大</button> -->
+    </td>
+  </tr>
+  <tr>
+    <th>職業ｽｷﾙ</th>
+    <td class="percent-input">
+      <input type="number" id="shokugyou_skill_attr_input_P">
+    </td>
+    <td>
+      <!-- <button class="max-btn" onclick="selectMax('shokugyou_skill_attr_P')">最大</button> -->
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <font size="-1">呪文武器ｽｷﾙ</font>
+    </th>
+    <td>
+      <select id="weapon_spell_skill_Lv_P">
+        <option value="0">0P</option>
+        <option value="1">160P</option>
+        <option value="2">170P</option>
+        <option value="3">180P</option>
+        <option value="4">200P</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="weapon_spell_skill_Lv_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <font size="-1">呪文職業ｽｷﾙ</font>
+    </th>
+    <td>
+      <select id="job_spell_skill_Lv_P">
+        <option value="0">0P</option>
+        <option value="1">160P</option>
+        <option value="2">170P</option>
+        <option value="3">180P</option>
+        <option value="4">200P</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="job_spell_skill_Lv_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>呪文宝珠</th>
+    <td>
+      <select id="houju_spell_Lv_P">
+        <option value="0">Lv0</option>
+        <option value="1">Lv1</option>
+        <option value="2">Lv2</option>
+        <option value="3">Lv3</option>
+        <option value="4">Lv4</option>
+        <option value="5">Lv5</option>
+        <option value="6">Lv6</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="houju_spell_Lv_P">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>エレブ</th>
+    <td>
+      <select id="element_boost_attr_P">
+        <option value="0">+0%</option>
+        <option value="0.1">+10%</option>
+      </select>
+    </td>
+    <td>
+      <input type="checkbox" data-target="element_boost_attr_P" class="checkbox-large">
+    </td>
+  </tr>
+  <tr>
+    <th>ﾄﾞﾗｺﾞﾗﾑ時</th>
+    <td>
+      <select id="drago_attr_P">
+        <option value="0">+0%</option>
+        <option value="0.2">+20% (通常)</option>
+        <option value="0.3">+30% (鎌150P)</option>
+      </select>
+    </td>
+    <td>
+      <!-- <button class="max-btn" data-max="drago_attr_P">最大</button> -->
+    </td>
+  </tr>
+  <tr>
+    <th>その他</th>
+    <td class="percent-input">
+      <input type="number" step="0.5" id="other_attr_input_P">
+    </td>
+    <td>
+      <!-- <button class="max-btn" onclick="selectMax('attr_input_P')">最大</button> -->
+    </td>
+  </tr>
+  <tr>
+    <th>合計</th>
+    <td class="bold" colspan="2">
+      <span id="attr_P_total"></span>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,163 @@
+<table class="status-table">
+  <tr>
+    <th colspan="2">ステータス(飯込で入力)</th>
+  </tr>
+  <tr>
+    <th>現在のMP</th>
+    <td><input type="number" id="mp"></td>
+  </tr>
+  <tr>
+    <th>こうげき力・右</th>
+    <td><input type="number" id="kougekiR"></td>
+  </tr>
+  <tr>
+    <th>こうげき力・左</th>
+    <td><input type="number" id="kougekiL"></td>
+  </tr>
+  <tr>
+    <th class="tooltip">
+      しゅび力<sup>※1</sup>
+      <span class="tooltip-text">
+        スカラ込で入力してください。<br>
+        鉄壁の進軍で使用します。
+      </span>
+    </th>
+    <td><input type="number" id="shubi"></td>
+  </tr>
+  <tr>
+    <th>こうげき魔力</th>
+    <td><input type="number" id="kouma"></td>
+  </tr>
+  <tr>
+    <th>かいふく魔力</th>
+    <td><input type="number" id="kaima"></td>
+  </tr>
+  <tr>
+    <th>ちから</th>
+    <td><input type="number" id="tikara"></td>
+  </tr>
+  <tr>
+    <th>きようさ</th>
+    <td><input type="number" id="kiyousa"></td>
+  </tr>
+  <tr>
+    <th>おしゃれさ</th>
+    <td><input type="number" id="osharesa"></td>
+  </tr>
+  <tr>
+    <th>
+      <font size="-1">攻撃力・右(計算後)</font>
+    </th>
+    <td><input type="number" id="kougekiR_calculated" readonly></td>
+  </tr>
+  <tr>
+    <th>
+      <font size="-1">攻撃力・左(計算後)</font>
+    </th>
+    <td><input type="number" id="kougekiL_calculated" readonly></td>
+  </tr>
+  <tr>
+    <th class="tooltip">
+      <font size="-1">
+        特技/呪文ダメ＋<sup>※2</sup>
+        <span class="tooltip-text">
+          毒時ダメ＋など、他ダメ＋系もあれば合算してください。
+        </span>
+      </font>
+    </th>
+    <td><input type="number" id="tokugi_plus"></td>
+  </tr>
+  <tr>
+    <th>会心時ダメ＋</th>
+    <td><input type="number" id="kaisin_plus"></td>
+  </tr>
+</table>
+
+
+
+<table class="info-table">
+
+  <colgroup>
+    <col style="width:83px">
+    <col>
+    <col style="width:30px">
+  </colgroup>
+
+  <tr>
+    <th colspan="2">バフ</th>
+    <th>
+      <button class="max-btn reset-group-btn" data-reset-group="buff">
+        ﾘｾｯﾄ
+      </button>
+    </th>
+  </tr>
+
+  <tr>
+    <th>バイキ系</th>
+    <td>
+      <select id="baiki">
+        <option value="0">なし</option>
+        <option value="0.2">+20% (バイシ)</option>
+        <option value="0.4">+40% (バイキ)</option>
+        <option value="-0.1">-10% (ヘナトス1段階)</option>
+        <option value="-0.2">-20% (ヘナトス2段階)</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="baiki" data-offset="-3">ﾊﾞｲｷ</button>
+    </td>
+  </tr>
+  <tr>
+    <th>牙神系</th>
+    <td>
+      <select id="gasin">
+        <option value="0">なし</option>
+        <option value="30">+30 (1段階)</option>
+        <option value="60">+60 (2段階)</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="gasin">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <font size="-1">鉄壁の進軍</font>
+    </th>
+    <td>
+      <select id="singun">
+        <option value="0">なし</option>
+        <option value="1">あり</option>
+      </select>
+    </td>
+    <td>
+      <input type="checkbox" data-target="singun" class="checkbox-large">
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <font size="-1">二刀の極意</font>
+    </th>
+    <td>
+      <select id="nitou">
+        <option value="0.0">なし</option>
+        <option value="0.25">Ⅰ</option>
+        <option value="0.5">Ⅱ</option>
+      </select>
+    </td>
+    <td>
+
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <font size="-1">バフの種類</font>
+    </th>
+    <td>
+      <input type="number" id="buff_count">
+    </td>
+    <td>
+
+    </td>
+  </tr>
+</table>

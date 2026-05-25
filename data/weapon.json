@@ -1,0 +1,703 @@
+{
+  "通常攻撃": [
+    {
+      "name": "ツメ、はやぶさの剣、聖王のナイフ etc.",
+      "formula": "N",
+      "ratio": [1, 0.7],
+      "random_r": 0,
+      "limit": 9999,
+      "applicable": ["force_damage_up_P"],
+      "kaisin": -1,
+      "kaisin_ratio": 1
+    },
+    {
+      "name": "単発",
+      "formula": "N",
+      "ratio": [1],
+      "random_r": 0,
+      "limit": 9999,
+      "applicable": ["force_damage_up_P"],
+      "kaisin": -1,
+      "kaisin_ratio": 1
+    }
+  ],
+  "片手剣": [
+    {
+      "name": "【共通】はやぶさ斬り",
+      "formula": "N",
+      "ratio": [1, 1],
+      "random_r": 0,
+      "limit": 1999,
+      "houju": 0.06,
+      "skill_point": [0, 0.02, 0.04, 0.08, 0.08]
+    },
+    {
+      "name": "【共通】ギガスラッシュ",
+      "formula": "kougeki + kouma < 1501 ? Math.max(0, kougeki + kouma - 200) * 49 / 130 + 160 : 650",
+      "random": 20,
+      "limit": 1999,
+      "times": 1,
+      "houju": 0.05,
+      "sinzui": 20,
+      "skill_point": [0, 0.02, 0.04, 0.08, 0.08],
+      "kaisin": 1
+    },
+    {
+      "name": "【共通】超はやぶさ斬り",
+      "formula": "N",
+      "ratio": [0.75, 0.75, 0.75, 0.75],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.06,
+      "skill_point": [0, 0.06, 0.08, 0.1, 0.1]
+    },
+    {
+      "name": "【共通】ギガブレイク",
+      "formula": "kougeki + kouma < 1501 ? Math.max(0, kougeki + kouma - 480) * 49 / 51 + 520 : 1500",
+      "random": 20,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.03,
+      "sinzui": 50,
+      "skill_point": [0, 0.08, 0.1, 0.12, 0.12],
+      "kaisin": 1
+    },
+    {
+      "name": "【共通】不死鳥天舞",
+      "formula": "N",
+      "ratio": [0.9, 0.9, 0.9, 0.9],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.05,
+      "skill_point": [0, 0.02, 0.05, 0.08, 0.08]
+    },
+    {
+      "name": "【共通】アルテマソード",
+      "formula": "N",
+      "ratio": [4.8],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.02,
+      "skill_point": [0, 0.01, 0.01, 0.01, 0.03]
+    }
+  ],
+  "短剣": [
+    {
+      "name": "【共通】ヴァイパーファング",
+      "formula": "N",
+      "ratio": [1.1],
+      "random_r": 0,
+      "limit": 1999,
+      "houju": 0.08,
+      "skill_point": [0, 0.06, 0.1, 0.15, 0.15]
+    },
+    {
+      "name": "【魔剣以外】タナトスハント",
+      "formula": "N",
+      "ratio": [1.5],
+      "random_r": 0,
+      "limit": 1999,
+      "houju": 0.05,
+      "sinzui": 20,
+      "skill_point": [0, 0.02, 0.04, 0.08, 0.08],
+      "applicable": ["damage_up_P_bonus"],
+      "auto_select": {
+        "damage_up_P_bonus": "thanatos"
+      }
+    },
+    {
+      "name": "【魔剣】タナトスハント・改",
+      "formula": "N",
+      "ratio": [1.35, 1.35],
+      "random_r": 0,
+      "limit": 3999,
+      "houju": 0.05,
+      "sinzui": 20,
+      "skill_point": [0, 0.02, 0.04, 0.08, 0.08],
+      "applicable": ["damage_up_P_bonus"],
+      "auto_select": {
+        "damage_up_P_bonus": "thanatos"
+      }
+    },
+    {
+      "name": "【共通】ナイトメアファング",
+      "formula": "N",
+      "ratio": [2.5],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.00,
+      "skill_point": [0, 0.06, 0.8, 0.1, 0.1]
+    }
+  ],
+  "ヤリ": [
+    {
+      "name": "【武闘どう】一閃突き・改",
+      "formula": "N",
+      "ratio": [2.7],
+      "random_r": 0,
+      "limit": 3999,
+      "houju": 0.05,
+      "auto_check": ["kaisin"]
+    },
+    {
+      "name": "【パラどう以外】さみだれ突き",
+      "formula": "N",
+      "ratio": [0.9, 0.9, 0.9, 0.9],
+      "bonus_plus": 10,
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.04,
+      "skill_point": [0, 0.06, 0.8, 0.1, 0.1]
+    },
+    {
+      "name": "【どう】さみだれ突き",
+      "formula": "N",
+      "ratio": [0.9, 0.9, 0.9, 0.9],
+      "bonus_plus": 10,
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.04,
+      "skill_point": [0, 0.08, 0.1, 0.12, 0.12]
+    },
+    {
+      "name": "【パラ】さみだれ突き・零",
+      "formula": "N",
+      "ratio": [1.2, 1.2, 1.2, 1.2],
+      "bonus_plus": 10,
+      "random_r": 0,
+      "limit": 1999,
+      "houju": 0.04,
+      "skill_point": [0, 0.06, 0.8, 0.1, 0.1]
+    },
+    {
+      "name": "【武闘】ジゴスパーク",
+      "formula": "Math.min((Math.max(kougeki, 999) - 300) * 600 / 699 + 500, 1100)",
+      "random": 30,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.05,
+      "sinzui": 50,
+      "skill_point": [0, 0.08, 0.1, 0.12, 0.12],
+      "kaisin": 1
+    },
+    {
+      "name": "【どう以外】超さみだれ突き",
+      "formula": "N",
+      "ratio": [1.2, 1.2, 1.2, 1.2, 1.2],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.02,
+      "skill_point": [0, 0.01, 0.01, 0.01, 0.03]
+    },
+    {
+      "name": "【どう】超さみだれ突き",
+      "formula": "N",
+      "ratio": [1.2, 1.2, 1.2, 1.2, 1.2],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.02,
+      "skill_point": [0, 0.05, 0.05, 0.05, 0.1]
+    }
+  ],
+  "オノ": [
+    {
+      "name": "【レン以外】蒼天魔斬",
+      "formula": "N",
+      "ratio": [3],
+      "random_r": 0.15,
+      "limit": 2999,
+      "houju": 0.05,
+      "skill_point": [0, 0.02, 0.03, 0.05, 0.05]
+    },
+    {
+      "name": "【レン】蒼天魔斬",
+      "formula": "N",
+      "ratio": [3.8],
+      "random_r": 0.15,
+      "limit": 3999,
+      "houju": 0.05,
+      "skill_point": [0, 0.02, 0.03, 0.05, 0.05]
+    },
+    {
+      "name": "【レンまも以外】オノむそう",
+      "formula": "N",
+      "ratio": [2.15],
+      "random_r": 0.15,
+      "limit": 1999,
+      "houju": 0.04,
+      "sinzui": 20,
+      "skill_point": [0, 0.02, 0.03, 0.05, 0.05],
+      "kaisin": 1
+    },
+    {
+      "name": "【レンまも】オノむそう・改",
+      "formula": "N",
+      "ratio": [2.5],
+      "random_r": 0.15,
+      "limit": 2999,
+      "houju": 0.04,
+      "sinzui": 20,
+      "skill_point": [0, 0.02, 0.03, 0.05, 0.05],
+      "kaisin": 1
+    },
+    {
+      "name": "【戦士以外】鉄甲斬",
+      "formula": "N",
+      "ratio": [1.5],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.08,
+      "sinzui": 20,
+      "skill_point": [0, 0.06, 0.08, 0.1, 0.1]
+    },
+    {
+      "name": "【まも以外】真・オノむそう",
+      "formula": "N",
+      "ratio": [1.9, 1.9],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.04,
+      "sinzui": 50,
+      "skill_point": [0, 0.02, 0.03, 0.05, 0.05],
+      "kaisin": 1
+    },
+    {
+      "name": "【まも】真・オノむそう・改",
+      "formula": "N",
+      "ratio": [2.3, 2.3],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.04,
+      "sinzui": 50,
+      "skill_point": [0, 0.02, 0.03, 0.05, 0.05],
+      "kaisin": 1
+    },
+    {
+      "name": "【レン以外】降魔紅蓮斬",
+      "formula": "N",
+      "ratio": [4],
+      "random_r": 0.15,
+      "limit": 9999,
+      "houju": 0.05,
+      "skill_point": [0, 0.02, 0.03, 0.05, 0.05]
+    },
+    {
+      "name": "【レン】降魔紅蓮斬",
+      "formula": "N",
+      "ratio": [5.5],
+      "random_r": 0.15,
+      "limit": 9999,
+      "houju": 0.05,
+      "skill_point": [0, 0.02, 0.03, 0.05, 0.05]
+    },
+    {
+      "name": "【戦士以外】大地裂断",
+      "formula": "N",
+      "ratio": [5],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.02,
+      "skill_point": [0, 0.02, 0.02, 0.02, 0.05],
+      "kaisin": 1
+    }
+  ],
+  "ツメ": [
+    {
+      "name": "【武闘以外】タイガークロー",
+      "formula": "N",
+      "ratio": [1.3, 1.3, 1.3],
+      "random_r": 0,
+      "limit": 1999,
+      "houju": 0.03,
+      "sinzui": 20,
+      "skill_point": [0, 0.02, 0.03, 0.05, 0.05]
+    },
+    {
+      "name": "【武闘】タイガークロー",
+      "formula": "N",
+      "ratio": [1.7, 1.65, 1.6],
+      "random_r": 0,
+      "limit": 1999,
+      "houju": 0.03,
+      "sinzui": 20,
+      "skill_point": [0, 0.02, 0.03, 0.05, 0.05]
+    },
+    {
+      "name": "【仲間モンス】タイガークロー",
+      "formula": "N",
+      "ratio": [1.3, 1.2, 1.1],
+      "random_r": 0,
+      "limit": 1999
+    },
+    {
+      "name": "【武闘以外】ライガークラッシュ",
+      "formula": "N",
+      "ratio": [2.5, 2.5, 2.5, 2.5, 2.5],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.01,
+      "sinzui": 50,
+      "skill_point": [0, 0.02, 0.03, 0.05, 0.05]
+    },
+    {
+      "name": "【武闘】ライガークラッシュ",
+      "formula": "N",
+      "ratio": [3.2, 3.15, 3.1, 3.05, 3.05],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.01,
+      "sinzui": 50,
+      "skill_point": [0, 0.02, 0.03, 0.05, 0.05]
+    },
+    {
+      "name": "【仲間モンス】ライガークラッシュ",
+      "formula": "N",
+      "ratio": [2.5, 2, 2, 1.5, 1.5],
+      "random_r": 0,
+      "limit": 9999
+    },
+    {
+      "name": "【共通】ゴッドスマッシュ",
+      "formula": "Math.min((Math.max(kougeki, 300) - 300) * 2 + 800, 2200)",
+      "random": 15,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.02,
+      "skill_point": [0, 0.01, 0.01, 0.01, 0.03],
+      "kaisin": 1
+    }
+  ],
+  "ムチ": [
+    {
+      "name": "【共通】双竜打ち",
+      "formula": "N",
+      "ratio": [2, 2],
+      "random_r": 0,
+      "limit": 1999,
+      "houju": 0.05,
+      "sinzui": 20,
+      "skill_point": [0, 0.02, 0.04, 0.06, 0.06]
+    },
+    {
+      "name": "【共通】疾風迅雷",
+      "formula": "N",
+      "ratio": [3.2],
+      "random_r": 0,
+      "bonus_plus": 5,
+      "limit": 9999,
+      "houju": 0.05,
+      "skill_point": [0, 0.06, 0.08, 0.1, 0.1],
+      "kaisin": 1
+    },
+    {
+      "name": "【共通】極竜打ち",
+      "formula": "N",
+      "ratio": [1.8, 1.8, 1.8],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.04,
+      "sinzui": 50,
+      "skill_point": [0, 0.04, 0.06, 0.08, 0.08]
+    },
+    {
+      "name": "【共通】バイキルショット",
+      "formula": "N",
+      "ratio": [3.5],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.03,
+      "skill_point": [0, 0.03, 0.05, 0.08, 0.08],
+      "kaisin": 1
+    },
+    {
+      "name": "【共通】悶絶全方打ち",
+      "formula": "Math.min(kougeki * 16 / 15 + 700, 2300)",
+      "random": 15,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.02,
+      "skill_point": [0, 0.01, 0.01, 0.01, 0.03],
+      "kaisin": 1
+    }
+  ],
+  "扇": [
+    {
+      "name": "【共通】おうぎのまい / おうぎのまい・改",
+      "formula": "N",
+      "ratio": [0.75, 0.75, 0.75, 0.75],
+      "random_r": 0,
+      "limit": 1999,
+      "houju": 0.06,
+      "skill_point": [0, 0.06, 0.1, 0.15, 0.15]
+    },
+    {
+      "name": "【踊り】アゲハ乱舞・改",
+      "formula": "N",
+      "ratio": [1.45],
+      "random_r": 0.15,
+      "limit": 2999,
+      "houju": 0.05,
+      "sinzui": 20,
+      "skill_point": [0, 0.03, 0.06, 0.09, 0.09],
+      "kaisin": 1
+    },
+    {
+      "name": "【共通】ピンクタイフーン",
+      "formula": "N",
+      "ratio": [2],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.06,
+      "skill_point": [0, 0.06, 0.08, 0.1, 0.1],
+      "kaisin": 1
+    },
+    {
+      "name": "【共通】百花繚乱 / 百花繚乱・改",
+      "formula": "N",
+      "ratio": [2.8],
+      "random_r": 0.15,
+      "limit": 9999,
+      "houju": 0.05,
+      "sinzui": 50,
+      "skill_point": [0, 0.08, 0.1, 0.12, 0.12],
+      "kaisin": 1
+    },
+    {
+      "name": "【旅芸以外】おうぎ乱舞",
+      "formula": "N",
+      "ratio": [0.8, 0.8, 0.8, 0.8, 0.8, 0.8],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.02,
+      "skill_point": [0, 0.01, 0.01, 0.01, 0.03]
+    }
+  ],
+  "ハンマー": [
+    {
+      "name": "【盗賊以外】プレートインパクト",
+      "formula": "N",
+      "ratio": [2.5],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.03,
+      "sinzui": 50,
+      "skill_point": [0, 0.06, 0.08, 0.1, 0.1],
+      "kaisin": 1
+    },
+    {
+      "name": "【共通】デビルクラッシュ",
+      "formula": "N",
+      "ratio": [2.2],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.08,
+      "skill_point": [0, 0.04, 0.06, 0.1, 0.1],
+      "applicable": ["damage_up_P_bonus"],
+      "auto_select": {
+        "damage_up_P_bonus": "shuzoku"
+      }
+    },
+    {
+      "name": "【共通】アースクラッシュ",
+      "formula": "N",
+      "ratio": [3.8],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.02,
+      "skill_point": [0, 0.01, 0.01, 0.01, 0.03],
+      "kaisin": 1
+    }
+  ],
+  "ブーメラン": [
+    {
+      "name": "【レン以外】バーニングバード",
+      "formula": "N",
+      "ratio": [0.35, 0.35, 0.35, 0.35, 0.35, 0.35, 0.35],
+      "random_r": 0,
+      "limit": 1999,
+      "houju": 0.03,
+      "skill_point": [0, 0.02, 0.04, 0.06, 0.06]
+    },
+    {
+      "name": "【レン】バーニングスワロー",
+      "formula": "N",
+      "ratio": [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
+      "random_r": 0,
+      "limit": 1999,
+      "houju": 0.03,
+      "skill_point": [0, 0.02, 0.04, 0.06, 0.06]
+    },
+    {
+      "name": "【旅芸】デュアルカッター",
+      "formula": "N",
+      "ratio": [2, 2],
+      "random_r": 0,
+      "limit": 1999,
+      "houju": 0.03,
+      "sinzui": 20,
+      "skill_point": [0, 0.03, 0.05, 0.08, 0.08],
+      "kaisin": 1
+    },
+    {
+      "name": "【レン以外】フローズンバード",
+      "formula": "N",
+      "ratio": [0.68, 0.68, 0.68, 0.68, 0.68, 0.68, 0.68],
+      "random_r": 0.08,
+      "limit": 9999,
+      "houju": 0.02,
+      "skill_point": [0, 0.06, 0.08, 0.1, 0.1]
+    },
+    {
+      "name": "【レン】フローズンスワロー",
+      "formula": "N",
+      "ratio": [0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8],
+      "random_r": 0.06,
+      "limit": 9999,
+      "houju": 0.02,
+      "skill_point": [0, 0.06, 0.08, 0.1, 0.1]
+    },
+    {
+      "name": "【旅芸以外】デュアルブレイカー",
+      "formula": "N",
+      "ratio": [2.4, 2.4],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.03,
+      "sinzui": 50,
+      "skill_point": [0, 0.03, 0.05, 0.08, 0.08],
+      "kaisin": 1
+    },
+    {
+      "name": "【旅芸】デュアルブレイカー",
+      "formula": "N",
+      "ratio": [3.2, 3.2],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.03,
+      "sinzui": 50,
+      "skill_point": [0, 0.03, 0.05, 0.08, 0.08],
+      "kaisin": 1
+    },
+    {
+      "name": "【共通】レボルスライサー",
+      "formula": "N",
+      "ratio": [5],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.03,
+      "skill_point": [0, 0.01, 0.03, 0.06, 0.06]
+    },
+    {
+      "name": "【レン】ギガスロー",
+      "formula": "N",
+      "ratio": [3, 3],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.02,
+      "skill_point": [0, 0.01, 0.01, 0.01, 0.03],
+      "kaisin": 1
+    },
+    {
+      "name": "【レン】ギガシュート",
+      "formula": "N",
+      "ratio": [4.5, 4.5],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.02,
+      "skill_point": [0, 0.01, 0.01, 0.01, 0.03],
+      "kaisin": 1
+    }
+  ],
+  "弓": [
+    {
+      "name": "【レン以外】さみだれうち",
+      "formula": "N",
+      "ratio": [0.65, 0.65, 0.65, 0.65],
+      "random_r": 0,
+      "limit": 1999,
+      "houju": 0.05,
+      "sinzui": 20,
+      "skill_point": [0, 0.02, 0.04, 0.06, 0.06]
+    },
+    {
+      "name": "【レン】さみだれうち・改",
+      "formula": "N",
+      "ratio": [0.75, 0.75, 0.75, 0.75],
+      "random_r": 0,
+      "limit": 1999,
+      "houju": 0.05,
+      "sinzui": 20,
+      "skill_point": [0, 0.02, 0.04, 0.06, 0.06]
+    },
+    {
+      "name": "【共通】シャイニングボウ / セイクリッドボウ",
+      "formula": "N",
+      "ratio": [0.75, 0.75, 0.75, 0.75, 0.75, 0.75],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.02,
+      "skill_point": [0, 0.02, 0.03, 0.05, 0.05]
+    },
+    {
+      "name": "【共通】ダークネスショット",
+      "formula": "N",
+      "ratio": [3.8],
+      "bonus_plus": 10,
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.03,
+      "skill_point": [0, 0.06, 0.08, 0.1, 0.1]
+    },
+    {
+      "name": "【レン】ロストショット",
+      "formula": "N",
+      "ratio": [4.75],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.05,
+      "skill_point": [0, 0.06, 0.08, 0.1, 0.1],
+      "kaisin": 1
+    },
+    {
+      "name": "【共通】サンライトアロー",
+      "formula": "N",
+      "ratio": [0.95, 0.95, 0.95, 0.95, 0.95],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.02,
+      "skill_point": [0, 0.02, 0.02, 0.02, 0.05]
+    }
+  ],
+  "鎌": [
+    {
+      "name": "【共通】ハデスの宴",
+      "formula": "Math.min((Math.max(kougeki + kouma, 200) - 200) * 1000 / 1670 + 150, 1150)",
+      "random": 20,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.05,
+      "skill_point": [0, 0.08, 0.1, 0.12, 0.12],
+      "kaisin": 1
+    },
+    {
+      "name": "【共通】厄災の滅撃",
+      "formula": "N",
+      "ratio": [3.75],
+      "debuff_ratio_formula": "150",
+      "random_r": 0.05,
+      "limit": 9999,
+      "houju": 0.03,
+      "skill_point": [0, 0.06, 0.08, 0.1, 0.1]
+    },
+    {
+      "name": "【共通】根絶やしの重撃",
+      "formula": "N",
+      "ratio": [5],
+      "random_r": 0.00,
+      "limit": 9999,
+      "houju": 0.05,
+      "sinzui": 50,
+      "kaisin": 1
+    }
+  ]
+}

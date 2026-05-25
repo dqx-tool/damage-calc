@@ -1,0 +1,942 @@
+{
+  "戦士": [
+    {
+      "name": "会心必中",
+      "formula": "N",
+      "ratio": [
+        7
+      ],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.1,
+      "applicable": [
+        "damage_up_P_bonus"
+      ],
+      "auto_select": {
+        "damage_up_P_bonus": "kaisin_hicchuu"
+      },
+      "auto_check": [
+        "kaisin"
+      ]
+    }
+  ],
+  "魔法使い": [
+    {
+      "name": "メドローア",
+      "formula": "Math.max(0, kouma - 1000) * 11 + 8999",
+      "random": 50,
+      "limit": 29999,
+      "houju": 0.02,
+      "remove_applicable": [
+        "kaisin"
+      ]
+    }
+  ],
+  "武闘家": [
+    {
+      "name": "打成一片",
+      "formula": "N",
+      "ratio": [
+        3.4
+      ],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.03,
+      "skill_point": [
+        0,
+        0.02,
+        0.02,
+        0.02,
+        0.05
+      ]
+    },
+    {
+      "name": "崩命拳(概算)",
+      "formula": "kougeki < 2000 ? Math.max(0, kougeki - 500) * 4999 / 1499 + 5000 : 9999",
+      "random": 25,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.02,
+      "kaisin": 1
+    }
+  ],
+  "盗賊": [
+    {
+      "name": "ギガボンバー",
+      "formula": "kiyousa < 1000 ? Math.max(0, kiyousa - 100) * 1800 / 899 + 500 : 2300",
+      "random": 120,
+      "limit": 9999,
+      "times": 1
+    },
+    {
+      "name": "ネバネバ爆弾",
+      "formula": "kiyousa < 1000 ? Math.max(0, kiyousa - 100) * 300 / 899 + 700 : 1000",
+      "random": 130,
+      "limit": 9999,
+      "times": 3
+    },
+    {
+      "name": "ファントムハック",
+      "formula": "kiyousa < 1000 ? Math.max(0, kiyousa - 100) * 1000 / 899 + 3000 : 4000",
+      "random": 25,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.02,
+      "kaisin": 1
+    }
+  ],
+  "旅芸人": [
+    {
+      "name": "ゴッドジャグリング",
+      "formula": "N",
+      "ratio": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.03
+    },
+    {
+      "name": "トリックゾーン",
+      "formula": "kougeki + osharesa < 2001 ? Math.max(0, kougeki + osharesa - 500) * 500 / 1500 + 2500 : 3000",
+      "random": 25,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.02,
+      "kaisin": 1
+    }
+  ],
+  "バトルマスター": [
+    {
+      "name": "天下無双",
+      "formula": "N",
+      "ratio": [
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        0.9
+      ],
+      "random_r": 0.1,
+      "limit": 1999,
+      "houju": 0.03
+    },
+    {
+      "name": "古今無双",
+      "formula": "N",
+      "ratio": [
+        1.75,
+        1.75,
+        1.75,
+        1.75
+      ],
+      "random_r": 0.1,
+      "limit": 9999,
+      "houju": 0.01,
+      "skill_point": [
+        0,
+        0.01,
+        0.01,
+        0.01,
+        0.02
+      ]
+    },
+    {
+      "name": "ラッシュバーン",
+      "formula": "N",
+      "ratio": [
+        4.7,
+        4.7,
+        4.7,
+        4.7
+      ],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.02
+    }
+  ],
+  "パラディン": [
+    {
+      "name": "グランドネビュラ",
+      "formula": "kougeki + kaima < 2501 ? Math.max(0, kougeki + kaima - 250) * 3780 / 2250 + 720 : 4500",
+      "random": 40,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.05
+    }
+  ],
+  "魔法戦士": [
+    {
+      "name": "エナジーフォール",
+      "formula": "mp * 10",
+      "random": 0,
+      "limit": 29999,
+      "times": 1,
+      "houju": 0.02,
+      "remove_applicable": [
+        "kaisin"
+      ]
+    }
+  ],
+  "レンジャー": [
+    {
+      "name": "【オノ以外】フェンリルアタック",
+      "formula": "kiyousa < 1000 ? Math.max(0, kiyousa - 300) * 22 / 699 + 226 : 248",
+      "random": 30,
+      "limit": 9999,
+      "times": 4,
+      "houju": 0.03,
+      "remove_applicable": [
+        "kaisin",
+        "tension_tension_P",
+        "*_tension_plus_P"
+      ]
+    },
+    {
+      "name": "【オノ】フェンリルアタック",
+      "formula": "kiyousa < 1000 ? Math.max(0, kiyousa - 300) * 320 / 699 + 480 : Math.floor((Math.min(kiyousa, 1999) - 999) / 25) + 800",
+      "random": 30,
+      "limit": 9999,
+      "times": 4,
+      "houju": 0.03,
+      "remove_applicable": [
+        "kaisin",
+        "tension_tension_P",
+        "*_tension_plus_P"
+      ]
+    },
+    {
+      "name": "【オノ以外】ケルベロスロンド",
+      "formula": "kiyousa < 1000 ? Math.max(0, kiyousa - 300) * 100 / 699 + 260 : 360",
+      "random": 10,
+      "limit": 9999,
+      "times": 3,
+      "remove_applicable": [
+        "tension_tension_P",
+        "*_tension_plus_P"
+      ]
+    },
+    {
+      "name": "【オノ】ケルベロスロンド",
+      "formula": "kiyousa < 1000 ? Math.max(0, kiyousa - 300) * 920 / 699 + 580 : Math.floor((Math.min(kiyousa, 1999) - 999) / 25) + 1500",
+      "random": 10,
+      "limit": 9999,
+      "times": 3,
+      "remove_applicable": [
+        "tension_tension_P",
+        "*_tension_plus_P"
+      ]
+    },
+    {
+      "name": "【オノ以外】アヌビスアタック(概算)",
+      "formula": "Math.max(0, kiyousa - 100) * 1000 / 1400 + 1000",
+      "random": 25,
+      "limit": 9999,
+      "times": 3,
+      "houju": 0.02,
+      "remove_applicable": [
+        "kaisin",
+        "tension_tension_P",
+        "*_tension_plus_P"
+      ]
+    },
+    {
+      "name": "【オノ】アヌビスアタック(概算)",
+      "formula": "Math.max(0, kiyousa - 100) * 1700 / 1400 + 1800",
+      "random": 10,
+      "limit": 9999,
+      "times": 3,
+      "houju": 0.02,
+      "remove_applicable": [
+        "kaisin",
+        "tension_tension_P",
+        "*_tension_plus_P"
+      ]
+    }
+  ],
+  "スーパースター": [
+    {
+      "name": "ゴールドシャワー",
+      "formula": "osharesa < 1000 ? Math.max(0, osharesa - 300) * 200 / 699 + 300 : 500",
+      "random": 30,
+      "limit": 9999,
+      "times": 1
+    },
+    {
+      "name": "ラグジュアルリム",
+      "formula": "kouma + osharesa < 1501 ? Math.max(0, kouma + osharesa - 650) * 600 / 850 + 450 : 1050",
+      "random": 20,
+      "limit": 9999,
+      "times": 1
+    },
+    {
+      "name": "プレシャスレイン",
+      "formula": "kouma + osharesa < 1801 ? Math.max(0, kouma + osharesa - 800) * 950 / 1000 + 600 : 1550",
+      "random": 50,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.03,
+      "skill_point": [
+        0,
+        0.02,
+        0.02,
+        0.02,
+        0.05
+      ]
+    }
+  ],
+  "まもの使い": [
+    {
+      "name": "ビーストファング",
+      "formula": "N",
+      "ratio": [
+        1.9,
+        1.9,
+        1.9,
+        1.9
+      ],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.03,
+      "skill_point": [
+        0,
+        0.01,
+        0.01,
+        0.01,
+        0.02
+      ]
+    },
+    {
+      "name": "流星爪牙(概算)",
+      "formula": "kougeki < 2000 ? Math.max(0, kougeki - 500) * 3999 / 1499 + 6000 : 9999",
+      "random": 25,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.02
+    }
+  ],
+  "どうぐ使い": [
+    {
+      "name": "アブソリュートレイ",
+      "formula": "kougeki + kiyousa < 1501 ? Math.max(0, kougeki + kiyousa - 500) * 2000 / 1000 + 2000 : 4000",
+      "random": 25,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.02
+    }
+  ],
+  "踊り子": [
+    {
+      "name": "つるぎの舞",
+      "formula": "N",
+      "ratio": [
+        1.2,
+        1.2,
+        1.2,
+        1.2
+      ],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.05
+    }
+  ],
+  "占い師": [
+    {
+      "name": "【A以上】正義のタロット",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 1) * 155 / 998 + 120 : Math.floor((Math.min(kouma, 1999) - 999) / 24) + 275",
+      "random": 3,
+      "limit": 4999,
+      "times": 1,
+      "applicable": [
+        "damage_up_P_bonus"
+      ],
+      "auto_select": {
+        "damage_up_P_bonus": "seigi_A"
+      },
+      "houju_tarot": 0.02
+    },
+    {
+      "name": "【オーラ】正義のタロット",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 180) * 192 / 819 + 178 : Math.floor((Math.min(kouma, 1999) - 999) / 24) + 370",
+      "random": 4,
+      "limit": 6999,
+      "times": 1,
+      "applicable": [
+        "damage_up_P_bonus"
+      ],
+      "auto_select": {
+        "damage_up_P_bonus": "seigi_aura"
+      },
+      "houju_tarot": 0.02
+    },
+    {
+      "name": "【A以上】戦車のタロット",
+      "formula": "N",
+      "ratio": [
+        1.2
+      ],
+      "buff_ratio_formula": "kougeki < 1000 ? 30 + Math.floor(kougeki / 505) : 32",
+      "buff_ratio_formula_random": 1,
+      "random_r": 0,
+      "limit": 4999,
+      "houju_tarot": 0.02
+    },
+    {
+      "name": "【オーラ】戦車のタロット",
+      "formula": "N",
+      "ratio": [
+        1.35
+      ],
+      "buff_ratio_formula": "kougeki < 1000 ? 43 + Math.floor(kougeki / 505) : 45",
+      "buff_ratio_formula_random": 1,
+      "random_r": 0,
+      "limit": 6999,
+      "houju_tarot": 0.02
+    },
+    {
+      "name": "【A以上】死神のタロット",
+      "formula": "kouma < 551 ? Math.max(0, kouma - 100) * 184 / 450 + 88 : Math.floor((Math.min(kouma, 1999) - 550) / 36) + 272",
+      "random": 12,
+      "limit": 3999,
+      "times": 1,
+      "houju_tarot": 0.02
+    },
+    {
+      "name": "【オーラ】死神のタロット",
+      "formula": "kouma < 651 ? Math.max(0, kouma - 150) * 249 / 500 + 121 : Math.floor((Math.min(kouma, 1999) - 650) / 36) + 370",
+      "random": 12,
+      "limit": 6999,
+      "times": 1,
+      "houju_tarot": 0.02
+    },
+    {
+      "name": "【A以上】塔のタロット",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 10) * 173 / 989 + 90 : Math.floor((Math.min(kouma, 1999) - 999) / 24) + 263",
+      "random": 6,
+      "limit": 3999,
+      "times": 1,
+      "houju_tarot": 0.02
+    },
+    {
+      "name": "【オーラ】塔のタロット",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 10) * 229 / 989 + 129 : Math.floor((Math.min(kouma, 1999) - 999) / 24) + 358",
+      "random": 6,
+      "limit": 6999,
+      "times": 1,
+      "houju_tarot": 0.02
+    },
+    {
+      "name": "【A以上】罪人のタロット",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 1) * 62 / 998 + 148 : 210",
+      "random": 1,
+      "debuff_ratio_formula_ratio": "0.2",
+      "limit": 4999,
+      "times": 1,
+      "houju_tarot": 0.02
+    },
+    {
+      "name": "【オーラ】罪人のタロット",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 1) * 88 / 998 + 164 : 252",
+      "random": 1,
+      "debuff_ratio_formula_ratio": "0.2",
+      "limit": 6999,
+      "times": 1,
+      "houju_tarot": 0.02
+    },
+    {
+      "name": "【A以上】隠者のタロット",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 10) * 176 / 989 + 99 : Math.floor((Math.min(kouma, 1999) - 999) / 24) + 275",
+      "random": 7,
+      "limit": 4999,
+      "times": 1,
+      "houju_tarot": 0.02
+    },
+    {
+      "name": "【オーラ】隠者のタロット",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 10) * 221 / 989 + 149 : Math.floor((Math.min(kouma, 1999) - 999) / 24) + 370",
+      "random": 7,
+      "limit": 6999,
+      "times": 1,
+      "houju_tarot": 0.02
+    }
+  ],
+  "天地雷鳴士": [
+    {
+      "name": "ひばしら",
+      "formula": "kouma < 2000 ? Math.max(0, kouma - 200) * 945 / 1799 + 555 : 1500",
+      "random": 15,
+      "limit": 2999,
+      "times": 1,
+      "houju": 0.03
+    },
+    {
+      "name": "じわれ",
+      "formula": "kouma < 2000 ? Math.max(0, kouma - 200) * 995 / 1799 + 405 : 1400",
+      "random": 15,
+      "limit": 2999,
+      "times": 1,
+      "houju": 0.03
+    },
+    {
+      "name": "いなずま",
+      "formula": "kouma < 2000 ? Math.max(0, kouma - 350) * 900 / 1649 + 450 : 1350",
+      "random": 15,
+      "limit": 2999,
+      "times": 1,
+      "houju": 0.03
+    },
+    {
+      "name": "めいどうふうま",
+      "formula": "kouma < 2000 ? Math.max(0, kouma - 350) * 865 / 1649 + 635 : 1500",
+      "random": 15,
+      "limit": 2999,
+      "times": 1,
+      "houju": 0.03
+    },
+    {
+      "name": "マグマ",
+      "formula": "kouma < 2000 ? Math.max(0, kouma - 400) * 1050 / 1599 + 850 : 1900",
+      "random": 20,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.01
+    },
+    {
+      "name": "水神のたつまき",
+      "formula": "kouma < 2000 ? Math.max(0, kouma - 400) * 1200 / 1599 + 800 : 2000",
+      "random": 30,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.01
+    },
+    {
+      "name": "れんごく火炎",
+      "formula": "kouma < 2000 ? Math.max(0, kouma - 400) * 1500 / 1599 + 900 : 2400",
+      "random": 30,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.01
+    },
+    {
+      "name": "しんくう竜巻",
+      "formula": "kouma < 2000 ? Math.max(0, kouma - 400) * 1500 / 1599 + 1100 : 2600",
+      "random": 50,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.01,
+      "skill_point": [
+        0,
+        0.01,
+        0.01,
+        0.01,
+        0.03
+      ]
+    },
+    {
+      "name": "シュジャク召喚",
+      "formula": "kouma < 2000 ? Math.max(0, kouma - 500) * 3999 / 1499 + 6000 : 9999",
+      "random": 20,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.02
+    }
+  ],
+  "遊び人": [
+    {
+      "name": "パルプンテ(流星)(概算)",
+      "formula": "kiyousa < 1501 ? Math.max(0, kiyousa - 500) * 1500 / 1000 + 4500 : 6000",
+      "random": 100,
+      "limit": 9999,
+      "times": 3
+    },
+    {
+      "name": "パルプンテ(プレゼントボックス)(概算)",
+      "formula": "kiyousa < 1501 ? Math.max(0, kiyousa - 500) * 2999 / 1000 + 7000 : 9999",
+      "random": 150,
+      "limit": 9999,
+      "times": 1
+    },
+    {
+      "name": "びっくりルーレット(概算)",
+      "formula": "kiyousa < 1201 ? Math.max(0, kiyousa - 300) * 6499 / 900 + 3500 : 9999",
+      "random": 15,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.02
+    }
+  ],
+  "デスマスター": [
+    {
+      "name": "呪詛",
+      "formula": "kougeki + kouma < 2001 ? Math.max(0, kougeki + kouma - 200) * 325 / 1800 + 25 : 350",
+      "random": 12,
+      "limit": 1999,
+      "times": 3,
+      "houju": 0.02
+    },
+    {
+      "name": "デスサイズ",
+      "formula": "kougeki + kouma < 2001 ? Math.max(0, kougeki + kouma - 200) * 1500 / 1800 + 100 : 1600",
+      "random": 12,
+      "limit": 2999,
+      "times": 1,
+      "houju": 0.01
+    },
+    {
+      "name": "サクリファイス(通常時)",
+      "formula": "kouma < 1501 ? Math.max(0, kouma - 200) * 1000 / 1300 + 1000 : 2000",
+      "random": 75,
+      "limit": 9999,
+      "times": 1
+    },
+    {
+      "name": "サクリファイス(デスパワー開放時)",
+      "formula": "kouma < 1501 ? Math.max(0, kouma - 200) * 1500 / 1300 + 1000 : 2000",
+      "random": 75,
+      "limit": 9999,
+      "times": 1
+    },
+    {
+      "name": "大呪詛",
+      "formula": "kougeki + kouma < 2001 ? Math.max(0, kougeki + kouma - 200) * 1600 / 1800 + 150 : 1750",
+      "random": 12,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.03
+    }
+  ],
+  "魔剣士": [
+    {
+      "name": "邪炎波",
+      "formula": "kouma < 1501 ? Math.max(0, kouma - 300) * 750 / 1200 + 600 : 1350",
+      "random": 30,
+      "limit": 1999,
+      "times": 1,
+      "houju": 0.03
+    },
+    {
+      "name": "暗黒連撃",
+      "formula": "N",
+      "ratio": [
+        0.93,
+        0.93,
+        0.93,
+        0.93,
+        0.93
+      ],
+      "random_r": 0.05,
+      "limit": 1999,
+      "houju": 0.03
+    },
+    {
+      "name": "ダークマター",
+      "formula": "kouma < 1501 ? Math.max(0, kouma - 300) * 1000 / 1200 + 1200 : 2200",
+      "random": 30,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.03
+    },
+    {
+      "name": "煉獄魔斬",
+      "formula": "N",
+      "ratio": [
+        2.13,
+        2.13,
+        2.13
+      ],
+      "random_r": 0.05,
+      "limit": 9999,
+      "houju": 0.03
+    },
+    {
+      "name": "黒炎帝の斬撃",
+      "formula": "N",
+      "ratio": [
+        5.15
+      ],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.01,
+      "auto_check": [
+        "kaisin"
+      ]
+    }
+  ],
+  "海賊": [
+    {
+      "name": "大砲",
+      "formula": "kiyousa + (kougeki / 3) + 115",
+      "random": 15,
+      "limit": 1999,
+      "times": 1
+    },
+    {
+      "name": "ウルトラ大砲",
+      "formula": "kiyousa + (kougeki / 3) + 1050",
+      "random": 50,
+      "limit": 4999,
+      "times": 1
+    },
+    {
+      "name": "散弾ショット",
+      "formula": "N",
+      "ratio": [
+        0.5,
+        0.45,
+        0.4,
+        0.35,
+        0.35,
+        0.35
+      ],
+      "random_r": 0,
+      "limit": 1999,
+      "houju": 0.03,
+      "kaisin_ratio": 0.5
+    }
+  ],
+  "ガーディアン": [
+    {
+      "name": "天光連斬",
+      "formula": "N",
+      "ratio": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "random_r": 0,
+      "limit": 1999,
+      "houju": 0.03
+    },
+    {
+      "name": "プラーナソード",
+      "formula": "N",
+      "ratio": [
+        1.1,
+        1.1,
+        1.1,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "random_r": 0,
+      "limit": 9999,
+      "houju": 0.02
+    }
+  ],
+  "竜術士": [
+    {
+      "name": "火球ブレス",
+      "formula": "kouma < 1751 ? Math.max(0, kouma - 100) * 1350 / 1650 + 100 : 1450",
+      "random": 15,
+      "limit": 1999,
+      "times": 1,
+      "houju": 0.03
+    },
+    {
+      "name": "通常攻撃(ドラゴラム時)",
+      "formula": "N",
+      "ratio": [
+        1.5,
+        1
+      ],
+      "random_r": 0,
+      "limit": 9999,
+      "applicable": [
+        "force_damage_up_P"
+      ],
+      "kaisin": -1
+    }
+  ],
+  "隠者": [
+    {
+      "name": "雷鳴双牙(概算)",
+      "formula": "kougeki + kaima < 2751 ? Math.max(0, kougeki + kaima - 100) * 1290 / 2650 + 100 : 1390",
+      "random": 5,
+      "limit": 9999,
+      "times": 2,
+      "houju": 0.02
+    },
+    {
+      "name": "スピリットブラスト(超概算)",
+      "formula": "kougeki + kaima < 2901 ? Math.max(0, kougeki + kaima - 250) * 3400 / 2650 + 1200 : 4600",
+      "random": 30,
+      "limit": 9999,
+      "times": 1,
+      "houju": 0.02
+    }
+  ],
+  "スライムナイト": [
+    {
+      "name": "スラ・スパーク",
+      "formula": "kouma < 451 ? Math.max(0, kouma - 100) * 940 / 350 + 360 : 1300",
+      "random": 6,
+      "limit": 2999,
+      "times": 1
+    },
+    {
+      "name": "スラ・シャイニング",
+      "formula": "kouma < 701 ? Math.max(0, kouma - 100) * 2200 / 600 + 500 : 2700",
+      "random": 12,
+      "limit": 9999,
+      "times": 1
+    },
+    {
+      "name": "スラ・ギガブレイク",
+      "formula": "N",
+      "ratio": [
+        3.2,
+        3.2
+      ],
+      "random_r": 0,
+      "limit": 9999
+    }
+  ],
+  "バトルレックス": [
+    {
+      "name": "竜のおたけび",
+      "formula": "N",
+      "ratio": [
+        3
+      ],
+      "random_r": 0,
+      "limit": 2999,
+      "kaisin": 1
+    },
+    {
+      "name": "しゃくねつのほのお",
+      "formula": "kougeki + kouma < 1000 ? Math.max(0, kougeki + kouma - 300) * 490 / 699 + 260 : 750",
+      "random": 10,
+      "limit": 2999,
+      "times": 1,
+      "remove_applicable": [
+        "kaisin"
+      ]
+    },
+    {
+      "name": "煉獄火炎",
+      "formula": "kougeki + kouma < 1000 ? Math.max(0, kougeki + kouma - 300) * 425 / 699 + 700 : 1125",
+      "random": 20,
+      "limit": 9999,
+      "times": 1,
+      "remove_applicable": [
+        "kaisin"
+      ]
+    }
+  ],
+  "ブラウニー": [
+    {
+      "name": "パワースタンプ",
+      "formula": "N",
+      "ratio": [
+        4
+      ],
+      "random_r": 0,
+      "limit": 3999
+    },
+    {
+      "name": "ウルトラスタンプ",
+      "formula": "N",
+      "ratio": [
+        5
+      ],
+      "random_r": 0,
+      "limit": 9999,
+      "kaisin": 1
+    },
+    {
+      "name": "グレートスタンプ",
+      "formula": "N",
+      "ratio": [
+        5.5
+      ],
+      "random_r": 0,
+      "limit": 9999
+    }
+  ],
+  "ドラゴンキッズ": [
+    {
+      "name": "しゃくねつのほのお",
+      "formula": "kougeki + kouma < 1000 ? Math.max(0, kougeki + kouma - 300) * 490 / 699 + 260 : 750",
+      "random": 10,
+      "limit": 2999,
+      "times": 1,
+      "remove_applicable": [
+        "kaisin"
+      ]
+    },
+    {
+      "name": "煉獄火炎",
+      "formula": "kougeki + kouma < 1000 ? Math.max(0, kougeki + kouma - 300) * 425 / 699 + 700 : 1125",
+      "random": 20,
+      "limit": 9999,
+      "times": 1,
+      "remove_applicable": [
+        "kaisin"
+      ]
+    }
+  ],
+  "いたずらもぐら": [
+    {
+      "name": "いたずラッシュ",
+      "formula": "N",
+      "ratio": [
+        2.3
+      ],
+      "random_r": 0,
+      "limit": 2999,
+      "kaisin": 1
+    }
+  ],
+  "やみしばり": [
+    {
+      "name": "冥府のひかり",
+      "formula": "N",
+      "ratio": [
+        1.5
+      ],
+      "debuff_ratio_formula": "239 + kouma * 0.111",
+      "random_r": 0,
+      "limit": 3999,
+      "kaisin": 1
+    },
+    {
+      "name": "呪縛",
+      "formula": "N",
+      "ratio": [
+        1.3
+      ],
+      "random_r": 0,
+      "limit": 2999,
+      "kaisin": 1
+    },
+    {
+      "name": "嘆きの霧",
+      "formula": "N",
+      "ratio": [
+        1.2
+      ],
+      "random_r": 0,
+      "limit": 2999,
+      "kaisin": 1
+    },
+    {
+      "name": "怨念の霧",
+      "formula": "N",
+      "ratio": [
+        1.8
+      ],
+      "random_r": 0,
+      "limit": 9999,
+      "kaisin": 1
+    }
+  ]
+}

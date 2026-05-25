@@ -1,0 +1,110 @@
+<table class="result-table no-disabled-style">
+
+  <colgroup>
+    <col style="width:65px">
+    <col style="width:180px">
+    <col style="width:45px">
+    <col>
+    <col>
+    <col>
+    <col>
+    <col>
+    <col>
+    <col>
+    <col>
+    <col style="width:65px">
+  </colgroup>
+  
+  <tr>
+    <th>種類</th>
+    <th>スキル名</th>
+    <th></th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th id="col7">7</th>
+    <th id="colL">左手</th>
+    <th>合計</th>
+  </tr>
+  <tr>
+    <td rowspan="3">
+      <label>
+        <input type="radio" name="job_or_weapon" value="weapon" checked>武器
+      </label><br>
+      <label>
+        <input type="radio" name="job_or_weapon" value="job">職業
+      </label><br>
+      <label>
+        <input type="radio" name="job_or_weapon" value="spell">呪文
+      </label>
+    </td>
+    <td rowspan="3">
+      <select id="job_or_weapon_select"></select><br>
+      <select id="skill_select"></select><br>
+      <label>
+        <input type="checkbox" id="left_hand" data-target="left_hand">左手
+      </label>
+      <label>
+        <input type="checkbox" id="limit" data-target="limit">上限
+      </label>
+      <label>
+        <input type="checkbox" id="kaisin" data-target="kaisin">会心
+      </label>
+    </td>
+    <th>最小</th>
+    <td class="bold"><span id="m1"></span></td>
+    <td><span id="m2"></span></td>
+    <td><span id="m3"></span></td>
+    <td><span id="m4"></span></td>
+    <td><span id="m5"></span></td>
+    <td><span id="m6"></span></td>
+    <td>
+      <span id="m7"></span>
+      <span id="mL2"></span>
+    </td>
+    <td>
+      <span id="mL1"></span>
+      <span id="m8"></span>
+    </td>
+    <td class="total"><span id="mt"></span></td>
+  </tr>
+  <tr>
+    <th>基本</th>
+    <td><span id="n1"></span></td>
+    <td><span id="n2"></span></td>
+    <td><span id="n3"></span></td>
+    <td><span id="n4"></span></td>
+    <td><span id="n5"></span></td>
+    <td><span id="n6"></span></td>
+    <td>
+      <span id="n7"></span>
+      <span id="nL2"></span>
+    </td>
+    <td>
+      <span id="nL1"></span>
+      <span id="n8"></span>
+    </td>
+    <td><span id="nt"></span></td>
+  </tr>
+  <tr>
+    <th>最大</th>
+    <td class="bold"><span id="M1"></span></td>
+    <td><span id="M2"></span></td>
+    <td><span id="M3"></span></td>
+    <td><span id="M4"></span></td>
+    <td><span id="M5"></span></td>
+    <td><span id="M6"></span></td>
+    <td>
+      <span id="M7"></span>
+      <span id="ML2"></span>
+    </td>
+    <td>
+      <span id="ML1"></span>
+      <span id="M8"></span>
+    </td>
+    <td class="total"><span id="Mt"></span></td>
+  </tr>
+</table>

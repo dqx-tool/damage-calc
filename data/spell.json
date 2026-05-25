@@ -1,0 +1,439 @@
+{
+  "プレイヤー": [
+    {
+      "name": "【炎】メラゾーマ",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 288) * 522 / 711 + 158 : Math.floor((Math.min(kouma, 1999) - 999) / 4) + 680",
+      "random": 6,
+      "limit": 5999,
+      "times": 1,
+      "houju_spell": 0.01,
+      "sinzui": 50,
+      "spell_job_skill_point": [
+        0,
+        0.03,
+        0.03,
+        0.03,
+        0.05
+      ],
+      "spell_weapon_skill_point": [
+        0,
+        0.01,
+        0.02,
+        0.03,
+        0.03
+      ],
+      "applicable": [
+        "wand_150_damage_up_P"
+      ],
+      "auto_check": [
+        "wand_150_damage_up_P"
+      ]
+    },
+    {
+      "name": "【炎】メラガイアー",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 416) * 650 / 583 + 480 : Math.floor((Math.min(kouma, 1999) - 999) / 3) + 1130",
+      "random": 23,
+      "limit": 9999,
+      "times": 1,
+      "houju_spell": 0.01,
+      "sinzui": 50,
+      "spell_job_skill_point": [
+        0,
+        0.03,
+        0.03,
+        0.03,
+        0.05
+      ],
+      "spell_weapon_skill_point": [
+        0,
+        0.01,
+        0.02,
+        0.03,
+        0.03
+      ],
+      "applicable": [
+        "wand_150_damage_up_P"
+      ],
+      "auto_check": [
+        "wand_150_damage_up_P"
+      ]
+    },
+    {
+      "name": "【炎】ギラグレイド",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 400) * 630 / 599 + 450 : Math.floor((Math.min(kouma, 1999) - 999) / 3) + 1080",
+      "random": 20,
+      "limit": 9999,
+      "times": 1,
+      "houju_spell": 0.01,
+      "sinzui": 50
+    },
+    {
+      "name": "【氷】マヒャド",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 169) * 500 / 830 + 82 : Math.floor((Math.min(kouma, 1999) - 999) / 4) + 582",
+      "random": 6,
+      "limit": 4999,
+      "times": 1,
+      "houju_spell": 0.01,
+      "sinzui": 50,
+      "spell_job_skill_point": [
+        0,
+        0.03,
+        0.03,
+        0.03,
+        0.05
+      ],
+      "spell_weapon_skill_point": [
+        0,
+        0.01,
+        0.02,
+        0.03,
+        0.03
+      ],
+      "applicable": [
+        "wand_150_damage_up_P"
+      ],
+      "auto_check": [
+        "wand_150_damage_up_P"
+      ]
+    },
+    {
+      "name": "【氷】マヒャデドス",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 400) * 628 / 599 + 382 : Math.floor((Math.min(kouma, 1999) - 999) / 3) + 1010",
+      "random": 20,
+      "limit": 9999,
+      "times": 1,
+      "houju_spell": 0.01,
+      "sinzui": 50,
+      "spell_job_skill_point": [
+        0,
+        0.03,
+        0.03,
+        0.03,
+        0.05
+      ],
+      "spell_weapon_skill_point": [
+        0,
+        0.01,
+        0.02,
+        0.03,
+        0.03
+      ],
+      "applicable": [
+        "wand_150_damage_up_P"
+      ],
+      "auto_check": [
+        "wand_150_damage_up_P"
+      ]
+    },
+    {
+      "name": "【風】バギクロス",
+      "formula": "kouma + kaima < 1000 ? Math.max(0, kouma + kaima - 79) * 330 / 920 + 72 : Math.floor((Math.min(kouma + kaima, 1999) - 999) / 5) + 402",
+      "random": 50,
+      "limit": 4999,
+      "times": 1,
+      "houju_spell": 0.01,
+      "sinzui": 50
+    },
+    {
+      "name": "【風】バギムーチョ",
+      "formula": "kouma + kaima < 1000 ? Math.max(0, kouma + kaima - 280) * 605 / 719 + 200 : Math.floor((Math.min(kouma + kaima, 1999) - 999) / 3) + 805",
+      "random": 50,
+      "limit": 9999,
+      "times": 1,
+      "houju_spell": 0.01,
+      "sinzui": 50
+    },
+    {
+      "name": "【風】コーラルレイン",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 200) * 550 / 799 + 350 : Math.floor((Math.min(kouma, 1999) - 999) / 3) + 900",
+      "random": 50,
+      "limit": 9999,
+      "times": 1,
+      "houju_spell": 0.01,
+      "sinzui": 50
+    },
+    {
+      "name": "【風】メイルストロム",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 200) * 550 / 799 + 650 : Math.floor((Math.min(kouma, 1999) - 999) / 3) + 1200",
+      "random": 50,
+      "limit": 9999,
+      "times": 1,
+      "houju_spell": 0.01,
+      "sinzui": 50
+    },
+    {
+      "name": "【土】ジバルンバ",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 416) * 1400 / 583 + 500 : Math.floor((Math.min(kouma, 1999) - 999) / 3) + 1900",
+      "random": 15,
+      "limit": 9999,
+      "times": 1,
+      "houju_spell": 0.01,
+      "sinzui": 50
+    },
+    {
+      "name": "【土】ドガンテル",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 288) * 540 / 711 + 160 : Math.floor((Math.min(kouma, 1999) - 999) / 4) + 700",
+      "random": 5,
+      "limit": 5999,
+      "times": 1,
+      "houju_spell": 0.01,
+      "sinzui": 50
+    },
+    {
+      "name": "【土】ドガンタロス",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 416) * 645 / 583 + 500 : Math.floor((Math.min(kouma, 1999) - 999) / 3) + 1145",
+      "random": 15,
+      "limit": 9999,
+      "times": 1,
+      "houju_spell": 0.01,
+      "sinzui": 50
+    },
+    {
+      "name": "【土】炸裂ドガンタロス(概算)",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 416) * 290 / 583 + 300 : Math.floor((Math.min(kouma, 1999) - 999) / 12) + 590",
+      "random": 15,
+      "limit": 9999,
+      "times": 2,
+      "houju_spell": 0.01,
+      "sinzui": 50
+    },
+    {
+      "name": "【闇】ドルモーア",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 340) * 269 / 659 + 162 : Math.floor((Math.min(kouma, 1999) - 999) / 4) + 431",
+      "random": 7,
+      "limit": 5999,
+      "times": 1,
+      "houju_spell": 0.01,
+      "sinzui": 50,
+      "spell_weapon_skill_point": [
+        0,
+        0.01,
+        0.02,
+        0.03,
+        0.03
+      ]
+    },
+    {
+      "name": "【闇】ドルマドン",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 483) * 510 / 516 + 360 : Math.floor((Math.min(kouma, 1999) - 999) / 3) + 870",
+      "random": 30,
+      "limit": 9999,
+      "times": 1,
+      "houju_spell": 0.01,
+      "sinzui": 50,
+      "spell_weapon_skill_point": [
+        0,
+        0.01,
+        0.02,
+        0.03,
+        0.03
+      ]
+    },
+    {
+      "name": "【光】イオグランデ",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 400) * 435 / 599 + 300 : Math.floor((Math.min(kouma, 1999) - 999) / 3) + 735",
+      "random": 10,
+      "limit": 9999,
+      "times": 1,
+      "houju_spell": 0.01,
+      "sinzui": 50,
+      "spell_weapon_skill_point": [
+        0,
+        0.01,
+        0.02,
+        0.03,
+        0.03
+      ]
+    },
+    {
+      "name": "【光】イオマータ",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 600) * 35 / 399 + 80 : Math.floor((Math.min(kouma, 1999) - 999) / 24) + 115",
+      "random": 6,
+      "limit": 2999,
+      "times": 8,
+      "houju_spell": 0.01,
+      "sinzui": 50,
+      "spell_job_skill_point": [
+        0,
+        0.01,
+        0.01,
+        0.01,
+        0.02
+      ],
+      "spell_weapon_skill_point": [
+        0,
+        0.01,
+        0.02,
+        0.03,
+        0.03
+      ]
+    },
+    {
+      "name": "【光】マダンテ",
+      "formula": "mp * 6",
+      "random": 0,
+      "limit": 19999,
+      "times": 1,
+      "houju_spell": 0.01,
+      "spell_weapon_skill_point": [
+        0,
+        0.01,
+        0.02,
+        0.03,
+        0.03
+      ],
+      "remove_applicable": [
+        "kaisin",
+        "tension_tension_P",
+        "*_tension_plus_P"
+      ],
+      "remove_auto_check": [
+        "maryoku_damage_up_P",
+        "kaisin"
+      ]
+    }
+  ],
+  "仲間モンスター(バトロ外)": [
+    {
+      "name": "【炎】メラゾーマ",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 288) * 322 / 711 + 158 : Math.floor((Math.min(kouma, 1999) - 999) / 4) + 480",
+      "random": 6,
+      "limit": 3999,
+      "times": 1
+    },
+    {
+      "name": "【炎】メラガイアー",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 416) * 450 / 583 + 480 : Math.floor((Math.min(kouma, 1999) - 999) / 3) + 930",
+      "random": 23,
+      "limit": 9999,
+      "times": 1
+    },
+    {
+      "name": "【炎】神速メラガイアー",
+      "formula": "Math.max(0, Math.min(kouma, 1999) - 416) * 450 / 1583 + 480",
+      "random": 23,
+      "limit": 9999,
+      "times": 3
+    },
+    {
+      "name": "【炎】ギラグレイド",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 400) * 430 / 599 + 450 : Math.floor((Math.min(kouma, 1999) - 999) / 3) + 880",
+      "random": 20,
+      "limit": 9999,
+      "times": 1
+    },
+    {
+      "name": "【氷】マヒャド",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 169) * 300 / 830 + 82 : Math.floor((Math.min(kouma, 1999) - 999) / 4) + 382",
+      "random": 6,
+      "limit": 2999,
+      "times": 1
+    },
+    {
+      "name": "【氷】マヒャデドス",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 400) * 428 / 599 + 382 : Math.floor((Math.min(kouma, 1999) - 999) / 3) + 810",
+      "random": 20,
+      "limit": 9999,
+      "times": 1
+    },
+    {
+      "name": "【風】バギクロス",
+      "formula": "kouma + kaima < 1000 ? Math.max(0, kouma + kaima - 79) * 330 / 920 + 72 : Math.floor((Math.min(kouma + kaima, 1999) - 999) / 5) + 402",
+      "random": 50,
+      "limit": 2999,
+      "times": 1
+    },
+    {
+      "name": "【風】バギムーチョ",
+      "formula": "kouma + kaima < 1000 ? Math.max(0, kouma + kaima - 280) * 605 / 719 + 200 : Math.floor((Math.min(kouma + kaima, 1999) - 999) / 3) + 805",
+      "random": 50,
+      "limit": 9999,
+      "times": 1
+    },
+    {
+      "name": "【風】コーラルレイン",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 200) * 550 / 799 + 350 : Math.floor((Math.min(kouma, 1999) - 999) / 3) + 900",
+      "random": 50,
+      "limit": 9999,
+      "times": 1
+    },
+    {
+      "name": "【土】ドガンテル",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 288) * 540 / 711 + 160 : Math.floor((Math.min(kouma, 1999) - 999) / 4) + 700",
+      "random": 5,
+      "limit": 3999,
+      "times": 1
+    },
+    {
+      "name": "【土】ドガンタロス",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 416) * 645 / 583 + 500 : Math.floor((Math.min(kouma, 1999) - 999) / 3) + 1145",
+      "random": 15,
+      "limit": 9999,
+      "times": 1
+    },
+    {
+      "name": "【闇】ドルモーア",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 340) * 259 / 659 + 162 : Math.floor((Math.min(kouma, 1999) - 999) / 4) + 421",
+      "random": 7,
+      "limit": 3999,
+      "times": 1
+    },
+    {
+      "name": "【闇】ドルマドン",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 483) * 492 / 516 + 360 : Math.floor((Math.min(kouma, 1999) - 999) / 3) + 852",
+      "random": 30,
+      "limit": 9999,
+      "times": 1
+    },
+    {
+      "name": "【闇】連続ドルマドン",
+      "formula": "Math.max(0, Math.min(kouma, 1999) - 483) * 492 / 1516 + 360",
+      "random": 30,
+      "limit": 9999,
+      "times": 3
+    },
+    {
+      "name": "【闇】おとなのじゅもん(概算)",
+      "formula": "Math.max(0, Math.min(kouma, 999) - 200) * 600 / 799 + 400",
+      "random": 20,
+      "limit": 3999,
+      "times": 1
+    },
+    {
+      "name": "【光】イオグランデ",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 400) * 392 / 599 + 300 : Math.floor((Math.min(kouma, 1999) - 999) / 3) + 692",
+      "random": 10,
+      "limit": 9999,
+      "times": 1
+    },
+    {
+      "name": "【光】イオマータ",
+      "formula": "kouma < 1000 ? Math.max(0, kouma - 600) * 30 / 399 + 80 : Math.floor((Math.min(kouma, 1999) - 999) / 24) + 110",
+      "random": 6,
+      "limit": 2999,
+      "times": 8
+    },
+    {
+      "name": "【光】マダンテ",
+      "formula": "mp * 6",
+      "random": 0,
+      "limit": 19999,
+      "times": 1,
+      "remove_applicable": [
+        "kaisin",
+        "tension_tension_P",
+        "tension_tension_P",
+        "mugen_tension_plus_P",
+        "kabu_tension_plus_P",
+        "sinzui_Lv_P",
+        "bu_lance_tension_plus_P",
+        "bougu_tension_plus_P",
+        "other_tension_plus_P"
+      ],
+      "remove_auto_check": [
+        "maryoku_damage_up_P",
+        "kaisin"
+      ]
+    }
+  ]
+}

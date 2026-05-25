@@ -1,0 +1,70 @@
+<table class="info-table">
+
+  <colgroup>
+    <col style="width:83px">
+    <col>
+    <col style="width:30px">
+  </colgroup>
+  
+  <tr>
+    <th colspan="2">C: 敵の属性耐性</th>
+    <th>
+      <button class="max-btn reset-group-btn" data-reset-group="attr_E">
+        ﾘｾｯﾄ
+      </button>
+    </th>
+  </tr>
+
+  <tr>
+    <th>属性弱点</th>
+    <td>
+      <select id="taisei_attr_E">
+        <option value="0">+0%</option>
+        <option value="manual">手動入力</option>
+        <option value="-0.1">-10% (小耐性)</option>
+        <option value="-0.2">-20% (中耐性)</option>
+        <option value="-0.3">-30% (大耐性)</option>
+        <option value="0.1">+10% (小弱点)</option>
+        <option value="0.2">+20% (中弱点)</option>
+        <option value="0.3">+30% (大弱点)</option>
+      </select>
+      <div id="taisei_enemy_input_attr"></div>
+    </td>
+    <td>
+      <button class="max-btn" data-max="taisei_attr_E">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>FB</th>
+    <td>
+      <select id="fb_attr_E">
+        <option value="0">+0%</option>
+        <option value="0.5">+50% (小FB)</option>
+        <option value="1">+100% (大FB)</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="fb_attr_E">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>属性低下</th>
+    <td>
+      <select id="down_attr_E">
+        <option value="0">+0%</option>
+        <option value="0.25">+25% (氷結らんげき、豪雪氷結乱撃)</option>
+        <option value="0.3">+30% (じわれ、めいどうふうま、マグマ)</option>
+        <option value="0.5">+50% (その他)</option>
+      </select>
+    </td>
+    <td>
+      <button class="max-btn" data-max="down_attr_E">最大</button>
+    </td>
+  </tr>
+  <tr>
+    <th>合計</th>
+    <td class="bold" colspan="2">
+      <span id="attr_E_total"></span>
+    </td>
+  </tr>
+</table>
