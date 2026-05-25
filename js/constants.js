@@ -7,7 +7,7 @@ export const targets = [
   "mirazo_damage_up_P",
   "wand_150_damage_up_P",
   "reimyaku_damage_up_E",
-  "bukimi_damage_up_E",
+  "weaponmi_damage_up_E",
 
   // タロット系
   "s100P_tarot_damage_up_P",
@@ -76,8 +76,8 @@ export const paramMap = {
 export const paramBaiki = [
   "tikara",
   "nitou",
-  "bukiR_power",
-  "bukiL_power",
+  "weaponR_power",
+  "weaponL_power",
   "kubi",
   "yubi",
   "mune",

@@ -124,7 +124,7 @@ function passesExtraConditions(id, skill) {
   ]
 
   const paramBaikiLeft = [
-    "bukiL_power",
+    "weaponL_power",
     "nitou"
   ]
 

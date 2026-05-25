@@ -20,8 +20,8 @@ export function calculate_status() {
   const gasin = val("gasin")
   const singun = val("singun")
 
-  const bukiR = val("bukiR_power")
-  const bukiL = val("bukiL_power")
+  const weaponR = val("weaponR_power")
+  const weaponL = val("weaponL_power")
   const kubi = val("kubi_power")
   const yubi = val("yubi_power")
   const mune = val("mune_power")
@@ -39,20 +39,20 @@ export function calculate_status() {
 
   const kougekiR_calculated =
     Math.floor(
-      baiki * (tikara + bukiR + accessory_total)
+      baiki * (tikara + weaponR + accessory_total)
       + kougekiR
       - tikara
-      - (bukiR + accessory_total)
+      - (weaponR + accessory_total)
       + gasin
       + singun_calculated
     )
 
   const kougekiL_calculated =
     Math.floor(
-      baiki * (tikara * nitou + bukiL + accessory_total)
+      baiki * (tikara * nitou + weaponL + accessory_total)
       + kougekiL
       - tikara * nitou
-      - (bukiL + accessory_total)
+      - (weaponL + accessory_total)
       + gasin
       + singun_calculated
     )

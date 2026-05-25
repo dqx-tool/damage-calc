@@ -71,7 +71,7 @@ export function applyCommonSkillConfig(data, type) {
         "maryoku_damage_up_P",
         "mirazo_damage_up_P",
         "reimyaku_damage_up_E",
-        "bukimi_damage_up_E",
+        "weaponmi_damage_up_E",
         "kaisin",
         "tension_tension_P",
         "*_plus_P",

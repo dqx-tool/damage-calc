@@ -51,6 +51,30 @@ const RESET_GROUPS = {
 
 
 
+// RESET_GROUPS たちを 1 つの集合にする
+function getResetGroupTargets() {
+
+  const set = new Set()
+
+  Object.values(RESET_GROUPS).forEach(group => {
+
+    group.forEach(target => {
+
+      if (target.startsWith("*_")) {
+        // ワイルドカードは後で処理するので無視
+        set.add(target)
+      } else {
+        set.add(target)
+      }
+
+    })
+  })
+
+  return set
+}
+
+
+
 // 各補正毎のリセット
 function resetGroup(targets) {
 
@@ -157,100 +181,20 @@ function trigger(el) {
 
 function resetAll() {
 
-  // select
   document
-    .querySelectorAll("select")
-    .forEach(select => {
+    .querySelectorAll("select, input")
+    .forEach(el => {
 
+      // KEEP_IDS除外
+      if (KEEP_IDS.includes(el.id)) return
+
+      // radioのKEEP_RADIOS除外
       if (
-        KEEP_IDS.includes(select.id)
+        el.type === "radio" &&
+        KEEP_RADIOS.includes(el.name)
       ) return
 
-      select.selectedIndex = 0
-
-      trigger(select)
-    })
-
-
-
-  // checkbox
-  document
-    .querySelectorAll(
-      'input[type="checkbox"]'
-    )
-    .forEach(checkbox => {
-
-      checkbox.checked = false
-
-      trigger(checkbox)
-    })
-
-
-
-  // input
-  document
-    .querySelectorAll(
-      'input[type="number"]'
-    )
-    .forEach(input => {
-
-      if (input.readOnly) return
-
-      input.value = ""
-
-      trigger(input)
-    })
-
-
-
-  // radio
-  document
-    .querySelectorAll(
-      'input[type="radio"]'
-    )
-    .forEach(radio => {
-
-      if (
-        KEEP_RADIOS.includes(
-          radio.name
-        )
-      ) return
-
-      radio.checked = false
-
-      trigger(radio)
-    })
-
-  updateAll()
-}
-
-
-
-function resetBuffSelects() {
-
-  document
-    .querySelectorAll("select")
-    .forEach(select => {
-
-      if (
-        [
-          ...KEEP_IDS,
-          "enemy_type_select",
-          "enemy_name_select"
-        ].includes(select.id)
-      ) return
-
-      const hasZero =
-        [...select.options]
-          .some(
-            o => o.value === "0"
-          )
-
-      if (!hasZero) return
-
-      select.value = "0"
-
-      trigger(select)
+      resetElement(el)
     })
 
   updateAll()
@@ -353,7 +297,12 @@ export function setupActionButtons() {
         "reset_select_btn"
       ) {
 
-        resetBuffSelects()
+        const targets = getResetGroupTargets()
+
+        if (targets) {
+
+          resetGroup(targets)
+        }
 
         return
       }
