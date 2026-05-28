@@ -303,3 +303,22 @@ select:disabled {
 #save_list {
   height: 30px;
 }
+
+
+/* ----------------------------
+   注釈
+---------------------------- */
+
+.note-list {
+  list-style: none;
+  counter-reset: note;
+  padding-left: 0;
+}
+
+.note-list li {
+  counter-increment: note;
+}
+
+.note-list li::before {
+  content: "※" counter(note) " ";
+}
