@@ -14,7 +14,8 @@ export async function loadEquipment() {
     "hoka",
     "monshou",
     "akasi",
-    "kokoro"
+    "kokoro1",
+    "kokoro2"
   ]
 
   equipmentList.forEach(id => {

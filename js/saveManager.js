@@ -49,7 +49,7 @@ const KEYMAP = {
   tibou_attr_P: "12",
   danzai_attr_P: "13",
   belt_attr_P: "14",
-  kokoro_attr_P: "15",
+  kokoro1_attr_P: "15",
   weapon_skill_attr_input_P: "16",
   job_skill_attr_input_P: "17",
   weapon_spell_skill_Lv_P: "18",
@@ -90,7 +90,7 @@ const KEYMAP = {
   monshou_power: "27",
   akasi: "28",
   akasi_power: "29",
-  kokoro_power: "2a",
+  kokoro1_power: "2a",
   enemy_type_select: "2b",
   enemy_name_select: "2c",
   shubi_E: "2d",
@@ -108,7 +108,9 @@ const KEYMAP = {
   phala_damage_up_E: "2p",
   save_name: "2q",
   save_list: "2r",
-  import_file: "2s"
+  import_file: "2s",
+  kokoro2_attr_P: "2t",
+  kokoro2_power: "2u",
 
 }
 

@@ -84,7 +84,8 @@ export const paramBaiki = [
   "hoka",
   "monshou",
   "akasi",
-  "kokoro_power"
+  "kokoro1_power",
+  "kokoro2_power"
 ]
 
 // 一部のスキルで参照するパラメータ

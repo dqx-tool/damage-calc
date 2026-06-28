@@ -28,10 +28,11 @@ export function calculate_status() {
   const hoka = val("hoka_power")
   const monshou = val("monshou_power")
   const akasi = val("akasi_power")
-  const kokoro = val("kokoro_power")
+  const kokoro1 = val("kokoro1_power")
+  const kokoro2 = val("kokoro2_power")
 
   const accessory_total = [
-    kubi, yubi, mune, hoka, monshou, akasi, kokoro
+    kubi, yubi, mune, hoka, monshou, akasi, kokoro1, kokoro2
   ].reduce((a, b) => a + b, 0)
 
   const singun_calculated =
