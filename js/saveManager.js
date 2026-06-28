@@ -120,6 +120,11 @@ const REVERSE_KEYMAP =
       .map(([k, v]) => [v, k])
   )
 
+// 保存する際保持しなくてよいデータ
+const IGNORE_IDS = [
+  "save_list",
+  "import_file"
+]
 
 
 /* ============================
@@ -166,6 +171,10 @@ export function getFormData() {
     .forEach(el => {
 
       if (!el.id && !el.name) {
+        return
+      }
+
+      if (IGNORE_IDS.includes(el.id)) {
         return
       }
 
