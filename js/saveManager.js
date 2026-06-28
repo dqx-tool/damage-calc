@@ -443,6 +443,7 @@ export async function setFormData(data) {
 
         if (el.id in data) {
           el.value = data[el.id]
+          el.dispatchEvent(new Event("change"))
         }
       }
     })

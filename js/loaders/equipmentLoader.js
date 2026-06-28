@@ -32,7 +32,7 @@ function createSelect(id, list) {
   list.forEach(item => {
     const option = document.createElement("option")
 
-    option.value = item.value
+    option.value = item.value ?? item.name
     option.textContent = item.name
     option.dataset.power = item.power
 
@@ -40,16 +40,18 @@ function createSelect(id, list) {
   })
 
   select.addEventListener("change", () => {
-
-    const selected = select.options[select.selectedIndex]
-
-    powerInput.value = selected.dataset.power
-
-    calculate_status()
-    calculate_ratio()
+    updateEquipment(select, powerInput)
   })
 
   if (select.options.length > 0) {
-    powerInput.value = select.options[0].dataset.power
+    updateEquipment(select, powerInput)
   }
+}
+
+function updateEquipment(select, powerInput) {
+  const selected = select.options[select.selectedIndex]
+  powerInput.value = selected?.dataset.power ?? 0
+
+  calculate_status()
+  calculate_ratio()
 }
